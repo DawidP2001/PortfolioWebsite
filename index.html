@@ -5,7 +5,9 @@ Purpose of the file: The main html file for the portfolio website
 -->
 <html>
     <head>
+        <title>Portfolio</title>
         <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <script src="script.js"></script>
     </head>
     <body>
@@ -23,9 +25,18 @@ Purpose of the file: The main html file for the portfolio website
         <div id="hero" class="section">
             <div id="leftHero">
                 <h1>Hi, my name is Dawid Pionk</h1>
-                <a href="https://github.com/DawidP2001">Github</a>
-                <a href="https://www.linkedin.com/in/dawid-pionk-65983a263/">Linkedin</a>
-                <a href="CV.pdf">Resume</a>
+                <div id="iconContainer">
+                    <a href="https://github.com/DawidP2001" class="iconLink">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dawid-pionk-65983a263/" class="iconLink">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="" class="iconLink">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                    <a href="CV.pdf" target="_blank" id="resumeLink">CV</a>
+                </div>
             </div>
         </div>
         <div id="aboutMe" class="section">

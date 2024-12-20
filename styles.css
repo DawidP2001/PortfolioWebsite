@@ -10,6 +10,11 @@ html, body{
     padding: 0;
     font-family: Arial, sans-serif;
 }
+i {
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+}
 
 /*Navbar Section*/
 nav{
@@ -26,7 +31,19 @@ nav{
     gap: 1vw;
     margin: 0 5vw;
 }
-
+.iconLink{
+    text-decoration: none;
+    margin: 1vw;
+}
+#resumeLink{
+    background-color: white;
+    color: black;
+    padding: 0.5vw 1vw;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 5vw;
+    padding: 1vw;
+}
 /*Hero Section*/
 #hero{
     display: flex;
@@ -34,4 +51,5 @@ nav{
     align-items: center;
     height: 100vh;
     background-color: lightblue;
+    text-align: center;
 }
