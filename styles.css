@@ -19,30 +19,27 @@ i {
 /*Navbar Section*/
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     width: 100vw;
-    background-color: green;
+    background-color: #F8F9FA;
+    z-index: 10;
 }
 
 .navContainer{
     display: flex;
     align-items: center;
+    align-self: stretch;
     gap: 1vw;
     margin: 0 5vw;
 }
-.iconLink{
-    text-decoration: none;
-    margin: 1vw;
-}
-#resumeLink{
-    background-color: white;
+#linkNavContainer a{
+    padding: 10px;
     color: black;
-    padding: 0.5vw 1vw;
-    border-radius: 5px;
     text-decoration: none;
-    margin-bottom: 5vw;
-    padding: 1vw;
+}
+#linkNavContainer a:hover{
+    color: blue;
 }
 /*Hero Section*/
 #hero{
@@ -52,4 +49,35 @@ nav{
     height: 100vh;
     background-color: lightblue;
     text-align: center;
+}
+.heroSection{
+    width: 50vw;
+}
+#leftHero {
+    min-width: 300px;
+    margin-left: 10vw;
+}
+.iconLink{
+    text-decoration: none;
+    margin: 1vw;
+    max-width: 50px;
+    border-radius: 50%;
+}
+.iconLink:hover{
+    transform: scale(1.2);
+}
+#iconContainer{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+#resumeLink{
+    background-color: black;
+    color: lightblue;
+    padding: 10px;
+    font-size: 25px;
+    font-family: Myriad Pro Bold;
+}
+#rightHero{
+    margin-right: 10vw;
 }
