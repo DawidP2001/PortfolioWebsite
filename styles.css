@@ -60,7 +60,7 @@ nav{
 .iconLink{
     text-decoration: none;
     margin: 1vw;
-    max-width: 50px;
+    max-width: 60px;
     border-radius: 50%;
 }
 .iconLink:hover{
@@ -75,7 +75,7 @@ nav{
     background-color: black;
     color: lightblue;
     padding: 10px;
-    font-size: 25px;
+    font-size: 35px;
     font-family: Myriad Pro Bold;
 }
 #rightHero{
