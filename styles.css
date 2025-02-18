@@ -4,7 +4,9 @@ Date: 19/12/2024
 Description: This is a simple CSS file for a website.
 */
 
-/*Elements spanning multiple sections*/
+/*/////////////////////////////////////////////////
+        TAG STYLING
+/////////////////////////////////////////////////*/
 html, body{
     margin: 0;
     padding: 0;
@@ -16,7 +18,9 @@ i {
     color: black;
 }
 
-/*Navbar Section*/
+/*/////////////////////////////////////////////////
+        NAVBAR SECTION
+/////////////////////////////////////////////////*/
 nav{
     display: flex;
     justify-content: space-around;
@@ -41,7 +45,9 @@ nav{
 #linkNavContainer a:hover{
     color: blue;
 }
-/*Hero Section*/
+/*/////////////////////////////////////////////////
+        HERO PAGE SECTION
+/////////////////////////////////////////////////*/
 #hero{
     display: flex;
     justify-content: center;
@@ -80,4 +86,35 @@ nav{
 }
 #rightHero{
     margin-right: 10vw;
+}
+
+/*/////////////////////////////////////////////////
+        PROJECT SECTION
+/////////////////////////////////////////////////*/
+.projectList{
+    display: none;
+    flex-direction: column;
+}
+#webDevelopmentList{
+    display: flex;
+}
+#projectSection{
+    display: flex;
+    width: 80%;
+    justify-self: center;
+    border: 1px solid black;
+    margin: 20px;
+}
+.tab{
+    display: flex;
+    width: 175px;
+    margin: 5px;
+    height: 30px;
+    line-height: 30px; 
+}
+.tab:hover{
+    background-color: lightblue;
+}
+.selected{
+    background-color: rgb(51, 115, 136);
 }

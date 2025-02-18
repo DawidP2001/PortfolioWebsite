@@ -95,43 +95,55 @@ Purpose of the file: The main html file for the portfolio website
                 </div>
             </div>
         </div>
-        <div id="projects" class="section">
-            <h1>Projects</h1>
-            <div id="normalProjectsContainer" class="projectsContainer">
-                <div class="project">
-                    <h2>Project 1</h2>
-                    <p>This is a description of project 1</p>
+        <div id="projectSection">
+            <div id="projectTabs">
+                <button id="webDevTab" class="tab" .class="selected" onclick="tabChanged(this)">Web Development</button>
+                <button id="mlTab" class="tab" onclick="tabChanged(this)">Machine Learning</button>
+                <button id="appDevTab" class="tab" onclick="tabChanged(this)">Application Development</button>
+                <button id="gamesTab" class="tab" onclick="tabChanged(this)">Games</button>
+                <button id="schoolLabsTab" class="tab" onclick="tabChanged(this)">School Labs</button>
+            </div>
+            <div id="projectsList">
+                <div id="webDevelopmentList" class="projectList">
+                    <button>Sentiment Analysis Project</button>
                 </div>
-                <div class="project">
-                    <h2>Project 2</h2>
-                    <p>This is a description of project 2</p>
+                <div id="machineLearningList" class="projectList">
+                    <!--Semester 1 projects-->
+                    <button>Decision Trees</button>
+                    <button>Linear Regression</button>
+                    <button>Multiple Linear Regression</button>
+                    <!--Semester 2 projects-->
+                    <button>K-nearest Neighbor</button>
+                    <button>Naive Bayes Classifiers</button>
+                    <button>Support Vector Machines</button>
+                    <button>K-Means</button>
                 </div>
-                <div class="project">
-                    <h2>Project 3</h2>
-                    <p>This is a description of project 3</p>
+                <div id="appDevList" class="projectList">
+                    <button>Java Bytecode Interpreter</button>
                 </div>
-                <div class="project">
-                    <h2>Project 4</h2>
-                    <p>This is a description of project 4</p>
+                <div id="gamesList" class="projectList">
+                    <button>Concurrent Development: Wator Project</button>
+                    <button>Assembly: Space Shooter</button>
+                </div>
+                <div id="schoolLabsList" class="projectList">
+                    <button>Secure App Development</button>
+                    <button>Concurrent Web Development</button>
                 </div>
             </div>
-            <div id="mlProjectsContainer" class="projectsContainer">
-                <div class="project">
-                    <h2>Project 5</h2>
-                    <p>This is a description of project 5</p>
-                </div>
-                <div class="project">
-                    <h2>Project 6</h2>
-                    <p>This is a description of project 6</p>
-                </div>
-                <div class="project">
-                    <h2>Project 7</h2>
-                    <p>This is a description of project 7</p>
-                </div>
-                <div class="project">
-                    <h2>Project 8</h2>
-                    <p>This is a description of project 8</p>
-                </div>
+            <div id="projectDescription">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Proin aliquet fringilla dui, eget commodo massa condimentum 
+                    vitae. Mauris elit eros, mollis sit amet est eu, pretium sodales
+                    tortor. Ut ut ipsum volutpat, lobortis justo id, aliquam libero. 
+                    Nunc finibus semper justo eu hendrerit. Vivamus ac ex sit amet diam 
+                    condimentum sagittis eu eu turpis. Donec malesuada, lorem nec 
+                    condimentum lobortis, ante mauris vulputate risus, vitae fermentum 
+                    diam eros non odio. Duis sollicitudin orci sed metus venenatis 
+                    efficitur. Pellentesque feugiat quam sed metus faucibus accumsan. 
+                    Praesent euismod, orci id tempor sodales, velit nisi tempor turpis, 
+                    ut dictum tortor ligula eu purus.
+                </p>
             </div>
         </div>
     </body>
