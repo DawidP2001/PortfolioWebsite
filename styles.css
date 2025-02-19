@@ -94,6 +94,13 @@ nav{
 .projectList{
     display: none;
     flex-direction: column;
+    
+}
+.projectButton{
+    margin: 0px 10px;
+    margin-bottom: 10px;
+    width: 175px;
+    height: 35px;
 }
 #webDevelopmentList{
     display: flex;
