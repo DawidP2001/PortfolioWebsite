@@ -8,89 +8,89 @@ const sentimentAnalysisProject = {
     title: "Sentiment Analysis",
     description: "This project uses a dataset of movie reviews and uses a neural network to predict the sentiment of the review.",
     technologies: ["Python", "Tensorflow", "Keras"],
-    github: ""
+    github: "https://github.com/DawidP2001/SentimentAnalysisProject"
 };
 
 const decisonTreeProject = {
     title: "Decision Tree",
     description: "This project uses a dataset of movie reviews and uses a decision tree to predict the sentiment of the review.",
     technologies: ["Python", "Scikit-learn"],
-    github: ""
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/DecisionTrees_IncomePredictor.ipynb"
 };
 
 const linearRegressionProject = {
     title: "Linear Regression",
     description: "This project uses a dataset of house prices and uses linear regression to predict the price of a house.",
     technologies: ["Python", "Scikit-learn"],
-    github: ""
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/LinearRegressionTesting.ipynb"
 };
 
 const multipleLinearRegression = {
     title: "Multiple Linear Regression",
     description: "This project uses a dataset of house prices and uses multiple linear regression to predict the price of a house.",
     technologies: ["Python", "Scikit-learn"],
-    github: ""
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/StudentPerformancePredictor.ipynb"
 };
 const kNearestNeighbor = {
     title: "K-Nearest Neighbor",
     description: "This project uses a dataset of movie reviews and uses a k-nearest neighbor algorithm to predict the sentiment of the review.",
     technologies: ["Python", "Scikit-learn"],
-    github: ""
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/k-nearest-neighbors.ipynb"
 }
 const naiveBayesProject = {
     title: "Naive Bayes",
     description: "This project uses a dataset of movie reviews and uses a naive bayes classifier to predict the sentiment of the review.",
     technologies: ["Python", "Scikit-learn"],
-    github: ""
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Naive-Bayes.ipynb"
 };
 
 const supportVectorMachineProject = {
     title: "Support Vector Machine",
     description: "This project uses a dataset of movie reviews and uses a support vector machine to predict the sentiment of the review.",
     technologies: ["Python", "Scikit-learn"],
-    github: ""
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Support-Vector-Machines.ipynb"
 };
 
 const kMeans = {
     title: "K-Means",
     description: "This project uses a dataset of movie reviews and uses a k-means clustering algorithm to group the reviews.",
     technologies: ["Python", "Scikit-learn"],
-    github: ""
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/K-Means.ipynb"
 };
 
 const javaBytecodeInterpreter = {
     title: "Java Bytecode Interpreter",
     description: "This project is a Java bytecode interpreter that can run Java class files.",
     technologies: ["Java"],
-    github: ""
+    github: "https://github.com/DawidP2001/Java-Bytecode-Interpreter"
 };
 
 const watorProject = {
     title: "Wator",
     description: "This project is a simulation of a predator-prey ecosystem.",
     technologies: ["Java"],
-    github: ""
+    github: "https://github.com/DawidP2001/WatorProject"
 };
 
 const assemblySpaceShooter = {
     title: "Assembly Space Shooter",
     description: "This project is a space shooter game written in assembly language.",
     technologies: ["Assembly"],
-    github: ""
+    github: "https://github.com/DawidP2001/Previous-Projects/tree/main/Assembly%20Game"
 };
 
 const secureAppDevelopment = {
     title: "Secure App Development",
     description: "This project is a secure Android app that encrypts messages.",
     technologies: ["Java", "Android"],
-    github: ""
+    github: "https://github.com/DawidP2001/Secure-App-Development-Labs"
 };
 
 const concurrentDevelopment = {
     title: "Concurrent Development",
     description: "This project is a multi-threaded program that simulates a bank.",
     technologies: ["Java"],
-    github: ""
+    github: "https://github.com/DawidP2001/ConDevLabs"
 };
 
 
@@ -202,4 +202,12 @@ function setProjectDescription(project){
     description.innerText = project.description;
     technologies.innerText = project.technologies.join(", ");
     github.innerText = project.github;
+}
+
+function flipCard(card) {
+    card.classList.toggle("flipped");
+}
+
+function skillContainerClicked(container){
+    container.classList.toggle("flipped");
 }
