@@ -35,7 +35,7 @@ TODO:
                 <a href="#projects">Project</a>
             </div>
         </nav>
-        <div id="hero" class="section">
+        <div id="hero">
             <div id="leftHero" class="heroSection">
                 <h1>Hi, my name is Dawid Pionk. I am a junior software developer</h1>
                 <div id="iconContainer">
@@ -245,60 +245,53 @@ TODO:
                     </div>
                 </div>
             </div>
-            <div id="projectSection">
-                <div id="projectTabsContainer">
-                    <button id="webDevTab" class="tab projectSectionTab selected" onclick="tabChanged(this)">Web Development</button>
-                    <button id="mlTab" class="tab projectSectionTab" onclick="tabChanged(this)">Machine Learning</button>
-                    <button id="appDevTab" class="tab projectSectionTab" onclick="tabChanged(this)">Application Development</button>
-                    <button id="gamesTab" class="tab projectSectionTab" onclick="tabChanged(this)">Games</button>
-                    <button id="schoolLabsTab" class="tab projectSectionTab" onclick="tabChanged(this)">School Labs</button>
-                </div>
-                <div id="projectsListContainer">
-                    <div id="webDevelopmentList" class="projectList">
-                        <button id="redditSentimentTab" class="tab projectTab" onclick="projectTabChanged(this)">Reddit Sentiment Analysis</button>
+            <div id="projectSectionContainer" class="section">
+                <h1 class="sectionTitle">Projects</h1>
+                <div id="projectSection">
+                    <div id="projectTabsContainer">
+                        <button id="webDevTab" class="tab projectSectionTab selected" onclick="tabChanged(this)">Web Development</button>
+                        <button id="mlTab" class="tab projectSectionTab" onclick="tabChanged(this)">Machine Learning</button>
+                        <button id="appDevTab" class="tab projectSectionTab" onclick="tabChanged(this)">Application Development</button>
+                        <button id="gamesTab" class="tab projectSectionTab" onclick="tabChanged(this)">Games</button>
+                        <button id="schoolLabsTab" class="tab projectSectionTab" onclick="tabChanged(this)">School Labs</button>
                     </div>
-                    <div id="machineLearningList" class="projectList">
-                        <!--Semester 1 projects-->
-                        <button id="decisionTreeTab" class="tab projectTab" onclick="projectTabChanged(this)">Decision Trees</button>
-                        <button id="linearRegressionTab" class="tab projectTab" onclick="projectTabChanged(this)">Linear Regression</button>
-                        <button id="multipleLinearRegressionTab" class="tab projectTab" onclick="projectTabChanged(this)">Multiple Linear Regression</button>
-                        <!--Semester 2 projects-->
-                        <button id="knnTab" class="tab projectTab" onclick="projectTabChanged(this)">K-nearest Neighbor</button>
-                        <button id="naiveBayesTab" class="tab projectTab" onclick="projectTabChanged(this)">Naive Bayes Classifiers</button>
-                        <button id="svmTab" class="tab projectTab" onclick="projectTabChanged(this)">Support Vector Machines</button>
-                        <button id="kMeansTab" class="tab projectTab" onclick="projectTabChanged(this)">K-Means</button>
+                    <div id="projectsListContainer">
+                        <div id="webDevelopmentList" class="projectList">
+                            <button id="redditSentimentTab" class="tab projectTab" onclick="projectTabChanged(this)">Reddit Sentiment Analysis</button>
+                        </div>
+                        <div id="machineLearningList" class="projectList">
+                            <!--Semester 1 projects-->
+                            <button id="decisionTreeTab" class="tab projectTab" onclick="projectTabChanged(this)">Decision Trees</button>
+                            <button id="linearRegressionTab" class="tab projectTab" onclick="projectTabChanged(this)">Linear Regression</button>
+                            <button id="multipleLinearRegressionTab" class="tab projectTab" onclick="projectTabChanged(this)">Multiple Linear Regression</button>
+                            <!--Semester 2 projects-->
+                            <button id="knnTab" class="tab projectTab" onclick="projectTabChanged(this)">K-nearest Neighbor</button>
+                            <button id="naiveBayesTab" class="tab projectTab" onclick="projectTabChanged(this)">Naive Bayes Classifiers</button>
+                            <button id="svmTab" class="tab projectTab" onclick="projectTabChanged(this)">Support Vector Machines</button>
+                            <button id="kMeansTab" class="tab projectTab" onclick="projectTabChanged(this)">K-Means</button>
+                        </div>
+                        <div id="appDevList" class="projectList">
+                            <button id="javaBytecodeTab" class="tab projectTab" onclick="projectTabChanged(this)">Java Bytecode Interpreter</button>
+                        </div>
+                        <div id="gamesList" class="projectList">
+                            <button id="watorProjectTab" class="tab projectTab" onclick="projectTabChanged(this)">Wator Project</button>
+                            <button id="assemblyGameTab" class="tab projectTab" onclick="projectTabChanged(this)">Assembly: Space Shooter</button>
+                        </div>
+                        <div id="schoolLabsList" class="projectList">
+                            <button id="secureDevTab" class="tab projectTab" onclick="projectTabChanged(this)">Secure App Development</button>
+                            <button id="concurrentDevTab" class="tab projectTab" onclick="projectTabChanged(this)">Concurrent Development</button>
+                        </div>
                     </div>
-                    <div id="appDevList" class="projectList">
-                        <button id="javaBytecodeTab" class="tab projectTab" onclick="projectTabChanged(this)">Java Bytecode Interpreter</button>
+                    <div id="projectDetailsSection">
+                        <h4 id="projectDetailsTitle">Title</h4>
+                        <div id="projectTitle"></div>
+                        <h4 id="projectDetailsTitle">Description</h4>
+                        <div id="projectDescription"></div>
+                        <h4 id="projectDetailsTitle">Technologies</h4>
+                        <div id="projectTechnologies"></div>
+                        <h4 id="projectDetailsTitle">Source Code</h4>
+                        <div><a id="projectGithub"></a></div>
                     </div>
-                    <div id="gamesList" class="projectList">
-                        <button id="watorProjectTab" class="tab projectTab" onclick="projectTabChanged(this)">Wator Project</button>
-                        <button id="assemblyGameTab" class="tab projectTab" onclick="projectTabChanged(this)">Assembly: Space Shooter</button>
-                    </div>
-                    <div id="schoolLabsList" class="projectList">
-                        <button id="secureDevTab" class="tab projectTab" onclick="projectTabChanged(this)">Secure App Development</button>
-                        <button id="concurrentDevTab" class="tab projectTab" onclick="projectTabChanged(this)">Concurrent Development</button>
-                    </div>
-                </div>
-                <div id="projectDetailsSection">
-                    <table>
-                        <tr>
-                            <td>Title:</td>
-                            <td><div id="projectTitle"></td>
-                        </tr>
-                        <tr>
-                            <td>Description:</td>
-                            <td><div id="projectDescription"></div></td>
-                        </tr>
-                        <tr>
-                            <td>Technologies:</td>
-                            <td><div id="projectTechnologies"></div></td>
-                        </tr>
-                        <tr>
-                            <td>Source Code:</td>
-                            <td><div id="projectGithub"></div></td>
-                        </tr>
-                    </table>
                 </div>
             </div>
         </div>

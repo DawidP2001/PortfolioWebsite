@@ -109,7 +109,21 @@ nav{
     margin-bottom: 100px;
 }
 .section{
-    max-width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    background-image: url(images/snowCrop.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .sectionTitle{
     background: lightblue;
@@ -365,40 +379,49 @@ This section contains css for the flipping cards
     display: flex;
     width: 175px;
     min-height: 30px;
-    line-height: 30px;
     cursor:pointer;
     opacity: .4; 
     transition: opacity .4s ease-in-out;
     justify-content: flex-end;
     border: 0px;
-    background-color: #fafafa;
+    background-color: lightgray;
     word-wrap: break-word;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-align: right;
 }
 .tab:hover{
     opacity: 0.75;
 }
 .selected{
+    display: flex;
+    justify-content: flex-end;
     opacity: 1;
     width: 100%;
     min-width: 175px;
     background-color: lightblue;
 }
 #projectDetailsSection{
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-content: flex-start;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Two columns: one for headers, one for content */
+    grid-template-rows: auto; /* Automatically adjust row height */
+    gap: 10px 20px; /* Adjust gap between rows and columns */
     width: 100%;
 }
-td{
-    text-align: left;
-    padding: 5px;
+
+#projectDetailsSection h4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    grid-column: 1;
+    margin: 0;
 }
 
-
+#projectDetailsSection div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 2; /* Place content in the second column */
+    margin: 0;
+}

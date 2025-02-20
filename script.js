@@ -201,7 +201,8 @@ function setProjectDescription(project){
     title.innerText = project.title;
     description.innerText = project.description;
     technologies.innerText = project.technologies.join(", ");
-    github.innerText = project.github;
+    github.href = project.github;
+    github.innerText = "Click Here";
 }
 
 function flipCard(card) {
