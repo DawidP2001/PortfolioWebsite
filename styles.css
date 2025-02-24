@@ -126,17 +126,16 @@ nav{
     background-size: cover;
 }
 .sectionTitle{
-    background: lightblue;
+    background: rgba(255, 255, 255, 0.8);
     color: gray;
     padding: 10px;
     border: white 5px solid;
     letter-spacing: 1rem;
-    opacity: 0.9;
+    opacity: 1;
     font-size: 3rem;
-    padding: 1rem;
 }
 .titleBox{
-    background: lightblue;
+    background: rgba(255, 255, 255, 0.8);
     color: gray;
     border: white 5px solid;
     opacity: 0.9;
@@ -162,15 +161,7 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
 }
-#aboutMeContainer h1{
-    background: lightblue;
-    color: gray;
-    padding: 10px;
-    border: white 5px solid;
-    letter-spacing: 1rem;
-    opacity: 0.9;
-    font-size: 3rem;
-}
+
 .aboutMeText{
     text-align: center;
     font-size: 1.5rem;
