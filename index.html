@@ -13,6 +13,10 @@ TODO:
 <html>
     <head>
         <title>Portfolio</title>
+        <!--Import bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--Icons CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--Import google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,29 +30,28 @@ TODO:
     <body>
         <nav>
             <div id="nameNavContainer" class="navContainer">
-                <img src="logo.png" alt="Logo">
                 <h1>Dawid Pionk</h1>
             </div>
             <div id="linkNavContainer" class="navContainer">
-                <a href="#aboutMe">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Project</a>
+                <a href="https://github.com/DawidP2001" class="iconLink">
+                    <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dawid-pionk-65983a263/" class="iconLink">
+                    <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="" class="iconLink">
+                    <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="CV.pdf" target="_blank" id="resumeLink">CV</a>
             </div>
         </nav>
         <div id="hero">
             <div id="leftHero" class="heroSection">
                 <h1>Hi, my name is Dawid Pionk. I am a junior software developer</h1>
                 <div id="iconContainer">
-                    <a href="https://github.com/DawidP2001" class="iconLink">
-                        <image src="images/github.png" class="iconLink"></image>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dawid-pionk-65983a263/" class="iconLink">
-                        <image src="images/Linkedin.png" class="iconLink"></image>
-                    </a>
-                    <a href="" class="iconLink">
-                        <image src="images/gmail.jpg" class="iconLink"></image>
-                    </a>
-                    <a href="CV.pdf" target="_blank" id="resumeLink" class="iconLink">CV</a>
+                    <a href="#aboutMeContainer" class="btn btn-primary">About me</a>
+                    <a href="#mySkillsContainer" class="btn btn-primary">Skills</a>
+                    <a href="#projectSectionContainer" class="btn btn-primary">Projects</a>
                 </div>
             </div>
             <div id="rightHero" class="heroSection">
