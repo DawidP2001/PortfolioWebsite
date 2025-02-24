@@ -5,9 +5,9 @@ Description: This is a script file for the index.html
 */
 
 const sentimentAnalysisProject = {
-    title: "Sentiment Analysis",
-    description: "This project uses a dataset of movie reviews and uses a neural network to predict the sentiment of the review.",
-    technologies: ["Python", "Tensorflow", "Keras"],
+    title: "Sentiment Analysis Web appilcation for Reddit",
+    description: `In this project I created a web application in which a user can enter a certain topic or user they want analysed. The web application makes a request to reddits API receives the posts/comments analyses the sentiment of that data, and then displays it using charts, graphs and tables.`,
+    technologies: ["HTML", "CSS", "Javascript", "Chart.js", "D3.js", "Python", "Flask", "PRAW", "VADER", "transformers"],
     github: "https://github.com/DawidP2001/SentimentAnalysisProject"
 };
 
@@ -66,15 +66,15 @@ const javaBytecodeInterpreter = {
 };
 
 const watorProject = {
-    title: "Wator",
-    description: "This project is a simulation of a predator-prey ecosystem.",
-    technologies: ["Java"],
+    title: "Wator Simulation",
+    description: "In this application I recreated the wator simulation using GoLang and concurrency.",
+    technologies: ["GoLang"],
     github: "https://github.com/DawidP2001/WatorProject"
 };
 
 const assemblySpaceShooter = {
     title: "Assembly Space Shooter",
-    description: "This project is a space shooter game written in assembly language.",
+    description: "In this project I created an arcade game in easy68xk assembly language, in which a player controls a spaceship and fights invading aliens in space.",
     technologies: ["Assembly"],
     github: "https://github.com/DawidP2001/Previous-Projects/tree/main/Assembly%20Game"
 };

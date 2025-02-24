@@ -124,7 +124,7 @@ nav{
     background-size: cover;
 }
 .sectionTitle{
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     color: gray;
     padding: 10px;
     border: white 5px solid;
@@ -133,7 +133,7 @@ nav{
     font-size: 3rem;
 }
 .titleBox{
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     color: gray;
     border: white 5px solid;
     opacity: 0.9;
@@ -163,7 +163,7 @@ nav{
 .aboutMeText{
     text-align: center;
     font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.671);
+    background-color: rgba(255, 255, 255, 0.842);
     padding: 1rem;
     max-width: 700px;
 }
@@ -429,4 +429,8 @@ h4#sourceCodeTitle.projectDetailsTitle{
 }
 div#buttomDiv{
     border-bottom: none;
+}
+h1#projectsHeader{
+    background: rgba(255, 255, 255, 0.664);
+    border: rgba(255, 255, 255, 0.603) 5px solid;
 }
