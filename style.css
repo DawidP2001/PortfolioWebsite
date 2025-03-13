@@ -1,0 +1,41 @@
+:root {
+    --primary: #00A8E8;
+    --secondary: #4DB5FF;
+}
+body{
+    background: #0A192F;
+}
+p{
+    color: #E6F1FF;
+}
+#hero{
+    height: 100vh;
+}
+
+/*/////////////////////////////////////////
+    NAVBAR SECTION
+//////////////////////////////////////////*/
+#navbar{
+    align-content: center;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    background-color: transparent;
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+.scrolled {
+    background: #fd7e14;
+    opacity: 0.96;
+    padding: 10px 0;
+}
+nav li {
+    margin-right: 1rem;
+}
+.nav-link.active{
+  color: black;
+}
