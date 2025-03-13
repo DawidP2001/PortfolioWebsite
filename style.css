@@ -1,6 +1,7 @@
 :root {
     --primary: #00A8E8;
     --secondary: #4DB5FF;
+    --text-color: #E6F1FF;
 }
 body{
     background: #0A192F;
@@ -11,7 +12,10 @@ p{
 #hero{
     height: 100vh;
 }
-
+.section-title{
+    text-align: center;
+    color: var(--text-color);
+}
 /*/////////////////////////////////////////
     NAVBAR SECTION
 //////////////////////////////////////////*/
@@ -25,8 +29,10 @@ p{
     justify-content: center;
     gap: 20px;
     padding: 15px 0;
-    background-color: transparent;
     transition: background 0.3s ease, padding 0.3s ease;
+    background: var(--secondary); /* Dark transparent */
+    opacity: 0.8;
+    backdrop-filter: blur(5px); /* Adds a modern blur effect */
 }
 .scrolled {
     background: #fd7e14;
@@ -38,4 +44,25 @@ nav li {
 }
 .nav-link.active{
   color: black;
+}
+/*/////////////////////////////////////////
+    Technologies SECTION
+//////////////////////////////////////////*/
+
+.card img {
+height: 150px; /* Ensure uniform image height */
+object-fit: contain; /* Prevent distortion */
+padding: 10px;
+background-color: #fff;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.card{
+    margin: 1rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    text-align: center;
+    min-width: 10rem;
+    max-width: 10rem;
+}
+.card-body{
+
 }
