@@ -1,3 +1,9 @@
+/*
+Author: Dawid Pionk
+Date: 19/12/2024
+Description: This is a script file for the index.html
+*/
+
 const sentimentAnalysisProject = {
     title: "Sentiment Analysis Web appilcation for Reddit",
     description: `In this project I created a web application in which a user can enter a certain topic or user they want analysed. The web application makes a request to reddits API receives the posts/comments analyses the sentiment of that data, and then displays it using charts, graphs and tables.`,
@@ -87,42 +93,53 @@ const concurrentDevelopment = {
     github: "https://github.com/DawidP2001/ConDevLabs"
 };
 
-window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("navbar");
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
+
+function tabChanged(button){
+    
+    let id = button.id
+    let webDevDiv = document.getElementById("webDevelopmentList");
+    let mlDiv = document.getElementById("machineLearningList");
+    let appDevDiv = document.getElementById("appDevList");
+    let gamesDiv = document.getElementById("gamesList");
+    let schoolLabsDiv = document.getElementById("schoolLabsList");
+    let allDivs = [webDevDiv, mlDiv, appDevDiv, gamesDiv, schoolLabsDiv];
+
+    let webDevTab = document.getElementById("webDevTab");
+    let mlTab = document.getElementById("mlTab")
+    let appDevTab = document.getElementById("appDevTab");
+    let gamesTab = document.getElementById("gamesTab");
+    let schoolLabsTab = document.getElementById("schoolLabsTab");
+    let allTabs = [webDevTab, mlTab, appDevTab, gamesTab, schoolLabsTab];
+
+    allDivs.forEach(div => {
+        div.style.display = "none";
+    });
+
+    allTabs.forEach(tab =>{
+        tab.classList.remove("selected");
+    });
+    button.classList.add("selected");
+    switch(id){
+        case "webDevTab":
+            webDevDiv.style.display = "flex";
+            break 
+        case "mlTab":
+            mlDiv.style.display = "flex";
+            break 
+        case "appDevTab":
+            appDevDiv.style.display = "flex";
+            break 
+        case "gamesTab":
+            gamesDiv.style.display = "flex";
+            break 
+        case "schoolLabsTab":
+            schoolLabsDiv.style.display = "flex";
+            break 
     }
-});
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    // Remove active class from all links
-                    navLinks.forEach((link) => link.classList.remove("active"));
-
-                    // Add active class to the corresponding link
-                    const activeLink = document.querySelector(
-                        `.nav-link[data-section="${entry.target.id}"]`
-                    );
-                    activeLink.classList.add("active");
-                }
-            });
-        },
-        { threshold: 0.4 } // Trigger when 60% of the section is visible
-    );
-
-    sections.forEach((section) => observer.observe(section));
-});
-
-function projectChanged(button){
-    let allProjectTabs = document.getElementsByClassName("project-btn");
+function projectTabChanged(button){
+    let allProjectTabs = document.getElementsByClassName("projectTab");
     allProjectTabs = Array.from(allProjectTabs);
     allProjectTabs.forEach(tab =>{
         tab.classList.remove("selected");
@@ -131,38 +148,47 @@ function projectChanged(button){
     
     let id=button.id;
     switch(id){
-        case "redditSentiment":
+        case "redditSentimentTab":
             setProjectDescription(sentimentAnalysisProject);
             break;
-        case "decisionTree":
+        case "decisionTreeTab":
             setProjectDescription(decisonTreeProject);
             break;
-        case "linearRegression":
+        case "linearRegressionTab":
             setProjectDescription(linearRegressionProject);
             break;
-        case "multipleLinearRegression":
+        case "multipleLinearRegressionTab":
             setProjectDescription(multipleLinearRegression);
             break;
-        case "knn":
+        case "knnTab":
             setProjectDescription(kNearestNeighbor);
             break;
-        case "naiveBayes":
+        case "naiveBayesTab":
             setProjectDescription(naiveBayesProject);
             break;
-        case "supportVectorMachine":
+        case "supportVectorMachineTab":
             setProjectDescription(supportVectorMachineProject);
             break;
-        case "kMeans":
+        case "kMeansTab":
             setProjectDescription(kMeans);
             break;
-        case "javaBytecode":
+        case "svmTab":
+            setProjectDescription(supportVectorMachineProject);
+            break;
+        case "javaBytecodeTab":
             setProjectDescription(javaBytecodeInterpreter);
             break;
-        case "watorProject":
+        case "watorProjectTab":
             setProjectDescription(watorProject);
             break;
-        case "assemblySpaceShooter":
+        case "assemblySpaceShooterTab":
             setProjectDescription(assemblySpaceShooter);
+            break;
+        case "secureDevTab":
+            setProjectDescription(secureAppDevelopment);
+            break;
+        case "concurrentDevTab":
+            setProjectDescription(concurrentDevelopment);
             break;
     }
 }
@@ -176,4 +202,13 @@ function setProjectDescription(project){
     description.innerText = project.description;
     technologies.innerText = project.technologies.join(", ");
     github.href = project.github;
+    github.innerText = "Click Here";
+}
+
+function flipCard(card) {
+    card.classList.toggle("flipped");
+}
+
+function skillContainerClicked(container){
+    container.classList.toggle("flipped");
 }

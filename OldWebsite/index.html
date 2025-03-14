@@ -1,0 +1,305 @@
+<!--
+Author: Dawid Pionk
+Date:   19/12/2024
+Purpose of the file: The main html file for the portfolio website
+-->
+<!--
+TODO:
+    1. Move icons to top right
+    2. Add styling to projects
+    3. Arr projects descriptions
+    4. Place links to sections in hero
+-->
+<html>
+    <head>
+        <title>Portfolio</title>
+        <!--Import bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--Icons CSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--Import google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <script src="script.js"></script>
+   </head>
+    <body>
+        <nav>
+            <div id="nameNavContainer" class="navContainer">
+                <h1>Dawid Pionk</h1>
+            </div>
+            <div id="linkNavContainer" class="navContainer">
+                <a href="https://github.com/DawidP2001" class="iconLink">
+                    <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dawid-pionk-65983a263/" class="iconLink">
+                    <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="" class="iconLink">
+                    <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="CV.pdf" target="_blank" id="resumeLink">CV</a>
+            </div>
+        </nav>
+        <div id="hero">
+            <div id="leftHero" class="heroSection">
+                <h1>Hi, my name is Dawid Pionk. I am a junior software developer, welcome to my website &#128512</h1>
+                <div id="iconContainer">
+                    <a href="#aboutMeContainer" class="btn btn-primary">About me</a>
+                    <a href="#mySkillsContainer" class="btn btn-primary">Skills</a>
+                    <a href="#projectSectionContainer" class="btn btn-primary">Projects</a>
+                </div>
+            </div>
+            <div id="rightHero" class="heroSection">
+                <image src="images/HeroPic.webp"></image>
+            </div>
+        </div>
+        <div id="generalSection">
+            <div id="aboutMeContainer" class="section">
+                <h1 class="sectionTitle">About Me</h1>
+                <div id="aboutMeSection">
+                    <p class="aboutMeText">
+                        My name is dawid pionk, I am a 4th year student at SETU. I'm on track to graduate in 2025 with first
+                        class honours in software engineering. I have a passion for software development and I am always looking for new
+                        challenges to tackle. I have experience in web development, machine learning and software development through my 
+                        university projects. As well as I have made games in python and assembly as my personal projects. 
+                    </p>
+                    <img class="portrait" src="images/me1Cropped.png"></img>
+                </div>
+            </div>
+            <div id="mySkillsContainer" class="section">
+                <h1 class="sectionTitle">Skills</h1>
+                <h2 class="titleBox">Click on any Card to view more</h2>
+                <div id="skillsContainer">
+                    <div id="frotendSkillsContainer" class="skillContainer" onclick="skillContainerClicked(this)">
+                        <div class="front">
+                            <h2>Web Development</h2>
+                            <div class=".circle">
+                                <svg
+                                width="250" height="250" viewBox="0 0 250 250"
+                                class="circular-progress" style="--progress: 50">
+                                <text x="125" y="125" font-size="50" text-anchor="middle" dominant-baseline="middle">
+                                    80%
+                                </text>
+                                <circle class="bg"></circle>
+                                <circle id="wdfg" class="fg"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="progressBarContainer">
+                                <h6>HTML</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:100%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>CSS</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:80%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Javascript</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:80%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>PHP</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:70%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>SQL</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:90%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Flask</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:80%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Django</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:60%"></div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div id="machineLearningContainer" class="skillContainer" onclick="skillContainerClicked(this)">
+                        <div class="front">
+                            <h2>Machine Learning</h2>
+                            <div class=".circle">
+                                <svg
+                                width="250" height="250" viewBox="0 0 250 250"
+                                class="circular-progress" style="--progress: 50">
+                                <text x="125" y="125" font-size="50" text-anchor="middle" dominant-baseline="middle">
+                                    70%
+                                </text>
+                                <circle class="bg"></circle>
+                                <circle id="mlfg" class="fg"></circle>
+                                </svg>
+                            </div> 
+                        </div>
+                        <div class="back">
+                            <div class="progressBarContainer">
+                                <h6>Supervised Learning</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:90%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Unsupervised Learning</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:80%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Reinforcement Learning</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:70%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Deep Learning</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:50%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Scikit-learn</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:80%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>TensorFlow</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:60%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>NLP</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:70%"></div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div id="softwareDevContainer" class="skillContainer" onclick="skillContainerClicked(this)">
+                        <div class="front">
+                            <h2>Software Development</h2>
+                            <div class=".circle">
+                                <svg
+                                width="250" height="250" viewBox="0 0 250 250"
+                                class="circular-progress" style="--progress: 50">
+                                <text x="125" y="125" font-size="50" text-anchor="middle" dominant-baseline="middle">
+                                    80%
+                                </text>
+                                <circle class="bg"></circle>
+                                <circle id="sdfg" class="fg"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="progressBarContainer">
+                                <h6>Java</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:90%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Python</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:90%"></div>
+                                </div>  
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>C#</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:60%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>C++</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:80%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Go</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:70%"></div>
+                                </div>
+                            </div>
+                            <div class="progressBarContainer">
+                                <h6>Assembly</h6>
+                                <div class="w3-light-grey">
+                                    <div class="w3-grey" style="height:24px;width:70%"></div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <div id="projectSectionContainer" class="section">
+                <h1 class="sectionTitle" id="projectsHeader">Projects</h1>
+                <div id="projectSection">
+                    <div id="projectTabsContainer">
+                        <button id="webDevTab" class="tab projectSectionTab selected" onclick="tabChanged(this)">Web Development</button>
+                        <button id="mlTab" class="tab projectSectionTab" onclick="tabChanged(this)">Machine Learning</button>
+                        <button id="appDevTab" class="tab projectSectionTab" onclick="tabChanged(this)">Application Development</button>
+                        <button id="gamesTab" class="tab projectSectionTab" onclick="tabChanged(this)">Games</button>
+                        <button id="schoolLabsTab" class="tab projectSectionTab" onclick="tabChanged(this)">School Labs</button>
+                    </div>
+                    <div id="projectsListContainer">
+                        <div id="webDevelopmentList" class="projectList">
+                            <button id="redditSentimentTab" class="tab projectTab" onclick="projectTabChanged(this)">Reddit Sentiment Analysis</button>
+                        </div>
+                        <div id="machineLearningList" class="projectList">
+                            <!--Semester 1 projects-->
+                            <button id="decisionTreeTab" class="tab projectTab" onclick="projectTabChanged(this)">Decision Trees</button>
+                            <button id="linearRegressionTab" class="tab projectTab" onclick="projectTabChanged(this)">Linear Regression</button>
+                            <button id="multipleLinearRegressionTab" class="tab projectTab" onclick="projectTabChanged(this)">Multiple Linear Regression</button>
+                            <!--Semester 2 projects-->
+                            <button id="knnTab" class="tab projectTab" onclick="projectTabChanged(this)">K-nearest Neighbor</button>
+                            <button id="naiveBayesTab" class="tab projectTab" onclick="projectTabChanged(this)">Naive Bayes Classifiers</button>
+                            <button id="svmTab" class="tab projectTab" onclick="projectTabChanged(this)">Support Vector Machines</button>
+                            <button id="kMeansTab" class="tab projectTab" onclick="projectTabChanged(this)">K-Means</button>
+                        </div>
+                        <div id="appDevList" class="projectList">
+                            <button id="javaBytecodeTab" class="tab projectTab" onclick="projectTabChanged(this)">Java Bytecode Interpreter</button>
+                        </div>
+                        <div id="gamesList" class="projectList">
+                            <button id="watorProjectTab" class="tab projectTab" onclick="projectTabChanged(this)">Wator Project</button>
+                            <button id="assemblyGameTab" class="tab projectTab" onclick="projectTabChanged(this)">Assembly: Space Shooter</button>
+                        </div>
+                        <div id="schoolLabsList" class="projectList">
+                            <button id="secureDevTab" class="tab projectTab" onclick="projectTabChanged(this)">Secure App Development</button>
+                            <button id="concurrentDevTab" class="tab projectTab" onclick="projectTabChanged(this)">Concurrent Development</button>
+                        </div>
+                    </div>
+                    <div id="projectDetailsSection">
+                        <h4 class="projectDetailsTitle">Title</h4>
+                        <div id="projectTitle"></div>
+                        <h4 class="projectDetailsTitle">Description</h4>
+                        <div id="projectDescription"></div>
+                        <h4 class="projectDetailsTitle">Technologies</h4>
+                        <div id="projectTechnologies"></div>
+                        <h4 class="projectDetailsTitle" id="sourceCodeTitle">Source Code</h4>
+                        <div id="buttomDiv"><a id="projectGithub"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
