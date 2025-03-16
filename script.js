@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         `.nav-link[data-section="${entry.target.id}"]`
                     );
                     activeLink.classList.add("active");
+                    entry.target.classList.add('visible')
                 }
             });
         },
@@ -177,3 +178,18 @@ function setProjectDescription(project){
     technologies.innerText = project.technologies.join(", ");
     github.href = project.github;
 }
+
+// Create an intersection observer to track when the element is in view
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // Add 'visible' class when in view
+            observer.unobserve(entry.target); // Stop observing after the element appears
+        }
+    });
+}, { threshold: 0.5 }); // 50% of the element is visible before the animation triggers
+
+// Observe the target element
+document.querySelectorAll('.scroll-element').forEach(element => {
+    observer.observe(element);
+});
