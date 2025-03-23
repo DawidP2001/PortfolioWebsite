@@ -7,11 +7,12 @@ const sentimentAnalysisProject = {
 };
 
 // Machine Learning Projects
+// Semsester 1
 const decisonTreeProject = {
     title: "Decision Tree",
     description: "This project uses a dataset of movie reviews and uses a decision tree to predict the sentiment of the review.",
     technologies: ["Python", "Scikit-learn"],
-    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/DecisionTrees_IncomePredictor.ipynb",
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Decision%20Trees/DecisionTrees_IncomePredictor.ipynb",
     image: "images/Projects/Decision-Tree.svg"
 };
 
@@ -19,7 +20,7 @@ const linearRegressionProject = {
     title: "Linear Regression",
     description: "This project uses a dataset of house prices and uses linear regression to predict the price of a house.",
     technologies: ["Python", "Scikit-learn"],
-    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/LinearRegressionTesting.ipynb",
+    github: "https://github.com/DawidP2001/MLPortfolio/tree/main/Linear%20Regression",
     image: "images/Projects/Linear-Regression.png"
 };
 
@@ -27,51 +28,53 @@ const multipleLinearRegression = {
     title: "Multiple Linear Regression",
     description: "This project uses a dataset of house prices and uses multiple linear regression to predict the price of a house.",
     technologies: ["Python", "Scikit-learn"],
-    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/StudentPerformancePredictor.ipynb",
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Linear%20Regression/StudentPerformancePredictor.ipynb",
     image: "images/Projects/MLR.jpg"
 };
+
+// Semester 2
 const kNearestNeighbor = {
     title: "K-Nearest Neighbor",
-    description: "This project uses a dataset of movie reviews and uses a k-nearest neighbor algorithm to predict the sentiment of the review.",
-    technologies: ["Python", "Scikit-learn"],
-    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/k-nearest-neighbors.ipynb",
+    description: "In this notebook I go through explaining how the authors model works. I also test out the authors model to better understand it. I then create 2 examples of my own using KNN one for regression and the other for classification. Those models were used to predict the compressive strength of cement and the classifier example involved classifying a types of beans",
+    technologies: ["Python", "Jupyter Notebook", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/K-Nearest%20Neighbour/k-nearest-neighbors.ipynb",
     image: "images/Projects/K-Nearest-Neighbor.jpg"
 }
 const naiveBayesProject = {
     title: "Naive Bayes",
-    description: "This project uses a dataset of movie reviews and uses a naive bayes classifier to predict the sentiment of the review.",
-    technologies: ["Python", "Scikit-learn"],
-    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Naive-Bayes.ipynb",
+    description: "In this notebook I go through explaining how the authors model works. Tried out how different hyperparameters affect the authors model. I also create my own model using Naive Bayes to predict whether a kickstarter campaign was successful or not. I create 2 projects using Naive Bayes, one to predict the sentiment of tweets involving apple products, and the second that identifies spam emails.",
+    technologies: ["Python", "Jupyter Notebook", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Bayes%20Classifiers/Naive-Bayes.ipynb",
     image: "images/Projects/Naive-Bayes.jpg"
 };
 
 const supportVectorMachineProject = {
     title: "Support Vector Machine",
-    description: "This project uses a dataset of movie reviews and uses a support vector machine to predict the sentiment of the review.",
-    technologies: ["Python", "Scikit-learn"],
-    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Support-Vector-Machines.ipynb",
+    description: "In this notebook I go through explaining how the authors model works. I also have a section where I test out different types of kernels and parameters to see how they affect the model. I create my own model using SVMs to predict whether a kickstarter campaign was successful or not.",
+    technologies: ["Python", "Jupyter Notebook", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Support%20Vector%20Machines/Support-Vector-Machines.ipynb",
     image: "images/Projects/SVM.png"
 };
 
 const kMeans = {
     title: "K-Means",
-    description: "This project uses a dataset of movie reviews and uses a k-means clustering algorithm to group the reviews.",
-    technologies: ["Python", "Scikit-learn"],
-    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/K-Means.ipynb",
+    description: "In this notebook I go through explaining what the author did. Then I try out different types of kMeans clustering alogorithms. I also make my own model where I try to find out customer segments of online retailers.",
+    technologies: ["Python", "Jupyter Notebook", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/K-Means/K-Means.ipynb",
     image: "images/Projects/K-Means.png"
 };
 const LTSM = {
-    title: "LTSM",
-    description: "This project uses a dataset of movie reviews and uses a k-means clustering algorithm to group the reviews.",
-    technologies: ["Python", "Scikit-learn"],
-    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/K-Means.ipynb",
+    title: "Long Short-Term Memory Network",
+    description: "In this notebook I go through a LTSM example made by another author where they generate shakespearean like text and then I create my own LTSM to classify the sentiment of imdb reviews.",
+    technologies: ["Python", "Jupyter Notebook", "tesnorflow", "keras", "numpy", "matplotlib", "keras-tuner"],
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Neural%20Networks%20Notebooks/LTSM_NN.ipynb",
     image: "images/Projects/LTSM.png"
 };
 const GAN = {
-    title: "GAN",
-    description: "This project uses a dataset of movie reviews and uses a k-means clustering algorithm to group the reviews.",
-    technologies: ["Python", "Scikit-learn"],
-    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/K-Means.ipynb",
+    title: "Generative Adversarial Network",
+    description: "In this notebook I go through a GAN example made by another author where they generate images of clothes and then I create my own GAN to generate images of handwritten digits based on their model.",
+    technologies: ["Python", "Jupyter Notebook", "tesnorflow", "keras", "numpy", "matplotlib"],
+    github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Neural%20Networks%20Notebooks/DCGAN_NN.ipynb",
     image: "images/Projects/GAN.jpg"
 };
 // Other Projects
