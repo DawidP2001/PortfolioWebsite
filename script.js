@@ -216,3 +216,20 @@ const observer = new IntersectionObserver((entries, observer) => {
 document.querySelectorAll('.scroll-element').forEach(element => {
     observer.observe(element);
 });
+
+function preloadImages(){
+    const images = [
+        "images/Projects/Decision-Tree.svg",
+        "images/Projects/Linear-Regression.png",
+        "images/Projects/MLR.jpg",
+        "images/Projects/K-Nearest-Neighbor.jpg",
+        "images/Projects/Naive-Bayes.jpg",
+        "images/Projects/SVM.png",
+        "images/Projects/K-Means.png",
+        "images/Projects/LTSM.png",
+        "images/Projects/GAN.jpg"
+    ];
+    images.forEach(image =>{
+        new Image().src = image;
+    });
+}
