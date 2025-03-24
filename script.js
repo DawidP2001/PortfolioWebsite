@@ -35,14 +35,14 @@ const multipleLinearRegression = {
 // Semester 2
 const kNearestNeighbor = {
     title: "K-Nearest Neighbor",
-    description: "In this notebook I go through explaining how the authors model works. I also test out the authors model to better understand it. I then create 2 examples of my own using KNN one for regression and the other for classification. Those models were used to predict the compressive strength of cement and the classifier example involved classifying a types of beans",
+    description: "In this notebook I go through the original authors model explaining how it works. I also test out the authors model to better understand it. Then I create two examples of my own using KNN, one for regression and the other for classification. Those models were used to predict the compressive strength of cement and classifying a types of beans",
     technologies: ["Python", "Jupyter Notebook", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
     github: "https://github.com/DawidP2001/MLPortfolio/blob/main/K-Nearest%20Neighbour/k-nearest-neighbors.ipynb",
     image: "images/Projects/K-Nearest-Neighbor.jpg"
 }
 const naiveBayesProject = {
     title: "Naive Bayes",
-    description: "In this notebook I go through explaining how the authors model works. Tried out how different hyperparameters affect the authors model. I also create my own model using Naive Bayes to predict whether a kickstarter campaign was successful or not. I create 2 projects using Naive Bayes, one to predict the sentiment of tweets involving apple products, and the second that identifies spam emails.",
+    description: "In this notebook I go through the original authors model explaining how it works. Tested out how different hyperparameters affect the authors model. I created two projects using Naive Bayes, one to predict the sentiment of tweets involving apple products, and the second that identifies spam emails.",
     technologies: ["Python", "Jupyter Notebook", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
     github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Bayes%20Classifiers/Naive-Bayes.ipynb",
     image: "images/Projects/Naive-Bayes.jpg"
@@ -50,7 +50,7 @@ const naiveBayesProject = {
 
 const supportVectorMachineProject = {
     title: "Support Vector Machine",
-    description: "In this notebook I go through explaining how the authors model works. I also have a section where I test out different types of kernels and parameters to see how they affect the model. I create my own model using SVMs to predict whether a kickstarter campaign was successful or not.",
+    description: "In this notebook I go through the original authors model explaining how it works. I test out different types of kernels and parameters to see how they affect the model. I create my own model using SVMs to predict whether a kickstarter campaign was successful or not.",
     technologies: ["Python", "Jupyter Notebook", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
     github: "https://github.com/DawidP2001/MLPortfolio/blob/main/Support%20Vector%20Machines/Support-Vector-Machines.ipynb",
     image: "images/Projects/SVM.png"
@@ -58,7 +58,7 @@ const supportVectorMachineProject = {
 
 const kMeans = {
     title: "K-Means",
-    description: "In this notebook I go through explaining what the author did. Then I try out different types of kMeans clustering alogorithms. I also make my own model where I try to find out customer segments of online retailers.",
+    description: "In this notebook I go through explaining what the author did. I try out different types of kMeans clustering alogorithms. I make my own model where I try to find out customer segments of online retailers.",
     technologies: ["Python", "Jupyter Notebook", "Scikit-learn", "NumPy", "Pandas", "Matplotlib"],
     github: "https://github.com/DawidP2001/MLPortfolio/blob/main/K-Means/K-Means.ipynb",
     image: "images/Projects/K-Means.png"
