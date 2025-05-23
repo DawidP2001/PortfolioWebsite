@@ -138,6 +138,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function projectChanged(button){
+    const elements = document.querySelectorAll('.sentimentProjectButton');
+
+    elements.forEach(el => {
+    el.style.display = 'none'; // Show the elements
+    });
+    
     let allProjectTabs = document.getElementsByClassName("project-btn");
     allProjectTabs = Array.from(allProjectTabs);
     allProjectTabs.forEach(tab =>{
@@ -149,6 +155,12 @@ function projectChanged(button){
     switch(id){
         case "redditSentiment":
             setProjectDescription(sentimentAnalysisProject);
+            const elements = document.querySelectorAll('.sentimentProjectButton');
+
+            elements.forEach(el => {
+            el.style.display = 'inline-block'; // Show the elements
+            });
+
             break;
         case "decisionTree":
             setProjectDescription(decisonTreeProject);
@@ -190,6 +202,7 @@ function projectChanged(button){
 }
 
 function setProjectDescription(project){
+    
     let title = document.getElementById("projectTitle");
     let description = document.getElementById("projectDescription");
     let technologies = document.getElementById("projectTechnologies");
