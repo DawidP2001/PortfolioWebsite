@@ -166,6 +166,10 @@ line-height: 1.6; /* Increases readability */
 #about-img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
 }
+.highlight-text{
+    color: var(--primary);
+    font-weight: bold;
+}
 
 /*/////////////////////////////////////////
     Technologies SECTION
@@ -228,7 +232,6 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--text-color);
 }
 .sentimentProjectButton{
-    display: none;
     background: rgba(13, 110, 253, 0.7);
     color: var(--text-color);
     border: 0;

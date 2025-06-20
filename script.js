@@ -1,7 +1,7 @@
 const sentimentAnalysisProject = {
     title: "Sentiment Analysis Web appilcation for Reddit",
     description: `In this project I created a web application in which a user can enter a certain topic or user they want analysed. The web application makes a request to reddits API receives the posts/comments analyses the sentiment of that data, and then displays it using charts, graphs and tables.`,
-    technologies: ["HTML", "CSS", "Javascript", "Chart.js", "D3.js", "Python", "Flask", "PRAW", "VADER", "transformers"],
+    technologies: ["HTML", "CSS", "Javascript", "Chart.js", "D3.js", "Python", "Flask", "PRAW", "VADER", "transformers", "bootstrap"],
     github: "https://github.com/DawidP2001/SentimentAnalysisProject",
     image: "images/Projects/RedditSentiment.png"
 };
@@ -91,15 +91,15 @@ const watorProject = {
     description: "In this application I recreated the wator simulation using GoLang and concurrency.",
     technologies: ["GoLang"],
     github: "https://github.com/DawidP2001/WatorProject",
-    image: "images/Projects/GAN.jpg"
+    image: "images/Projects/wator.png"
 };
 
 const assemblySpaceShooter = {
     title: "Assembly Space Shooter",
-    description: "In this project I created an arcade game in easy68xk assembly language, in which a player controls a spaceship and fights invading aliens in space.",
+    description: "In this project I created an arcade game in 68k assembly language, in which a player controls a spaceship and fights invading aliens in space.",
     technologies: ["Assembly"],
     github: "https://github.com/DawidP2001/Previous-Projects/tree/main/Assembly%20Game",
-    image: "images/Projects/GAN.jpg"
+    image: "images/Projects/AssemblyGame.png"
 };
 
 window.addEventListener("scroll", function () {
