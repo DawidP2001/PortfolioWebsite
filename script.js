@@ -3,7 +3,7 @@ const sentimentAnalysisProject = {
     description: `In this project I created a web application in which a user can enter a certain topic or user they want analysed. The web application makes a request to reddits API receives the posts/comments analyses the sentiment of that data, and then displays it using charts, graphs and tables.`,
     technologies: ["HTML", "CSS", "Javascript", "Chart.js", "D3.js", "Python", "Flask", "PRAW", "VADER", "transformers"],
     github: "https://github.com/DawidP2001/SentimentAnalysisProject",
-    image: "images/Projects/GAN.jpg"
+    image: "images/Projects/RedditSentiment.png"
 };
 
 // Machine Learning Projects
@@ -83,7 +83,7 @@ const javaBytecodeInterpreter = {
     description: "This project is a Java bytecode interpreter that can run Java class files.",
     technologies: ["Java"],
     github: "https://github.com/DawidP2001/Java-Bytecode-Interpreter",
-    image: "images/Projects/GAN.jpg"
+    image: "images/Projects/bytecode.png"
 };
 
 const watorProject = {
