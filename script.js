@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.4 } // Trigger when 60% of the section is visible
+        { threshold: 0.1 } // Trigger when 60% of the section is visible
     );
 
     sections.forEach((section) => observer.observe(section));

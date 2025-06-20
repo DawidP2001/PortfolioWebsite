@@ -186,7 +186,6 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin: 1rem;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     text-align: center;
-    min-width: 10rem;
     max-width: 10rem;
     transition: transform 0.3s ease-in-out;
 }
