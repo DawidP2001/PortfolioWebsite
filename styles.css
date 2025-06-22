@@ -79,7 +79,7 @@ nav li {
 }
 .navbar-brand{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 .nav-link{
@@ -149,6 +149,26 @@ nav li {
     background-size: 300% 300%;
     animation: gradientAnimation 10s ease infinite;
   }
+#heroText h1{
+    font-size: 5rem;
+}
+#heroText p{
+    font-size: 2rem;
+}
+#heroText a{
+    font-size: 2rem;
+}
+#heroText button{
+    font-size: 2rem;
+}
+@media (min-width: 992px) {
+    #heroText h1{
+        font-size: 2rem;
+    }
+    #heroText p{
+        font-size: 1.2rem;
+    }
+}
 /*/////////////////////////////////////////
     About SECTION
 //////////////////////////////////////////*/
@@ -186,12 +206,14 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin: 1rem;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     text-align: center;
+    min-width: 10rem;
     max-width: 10rem;
     transition: transform 0.3s ease-in-out;
 }
 #technology-container .card:hover{
     transform: scale(1.05); /* Slight zoom on hover */
 }
+
 /*/////////////////////////////////////////
     PROJECT SECTION
 //////////////////////////////////////////*/
