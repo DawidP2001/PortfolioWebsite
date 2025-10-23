@@ -1,15 +1,17 @@
 import Navbar from './components/Navbar'
 import './App.css'
+import HomePage from './pages/HomePage'
+import Footer from './components/Footer'
 
 function App() {
 
   return (
-    <main>
+    <main className='bg-(--dominant-colour)'>
       <Navbar />
-      <div className='min-h-screen w-full bg-gray-800'>
-        content
+      <div className='min-h-screen w-full'>
+        <HomePage />
       </div>
-      content
+      <Footer />
     </main>
   )
 }
