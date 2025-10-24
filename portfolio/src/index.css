@@ -5,7 +5,7 @@
   line-height: 1.5;
   font-weight: 400;
   padding: 0;
-
+  box-sizing: border-box;
   color-scheme: light dark;
   color: #000000;
 
@@ -13,26 +13,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary-colour: #FEB21A;
-  --secondary-colour: #134686;
+  --primary-colour: #fdc500;
+  --secondary-colour: #003f88;
   --dominant-colour: #ffffff;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--dominant-colour);
 }
 
 h1 {

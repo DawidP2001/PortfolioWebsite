@@ -9,7 +9,8 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({className}) => {
     return (
-        <div className={"home-page " + className}>
+        <div className={"home-page min-h-screen " + className}>
+            <div className="mt-10"></div>
             <HeroSection />
             <AboutmeSection />
             <ProjectsSection />

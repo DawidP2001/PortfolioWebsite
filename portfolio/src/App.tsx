@@ -6,11 +6,9 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <main className='bg-(--dominant-colour)'>
+    <main className="bg-[var(--dominant-colour)] max-w-screen min-w-screen">
       <Navbar />
-      <div className='min-h-screen w-full'>
-        <HomePage />
-      </div>
+      <HomePage />
       <Footer />
     </main>
   )
