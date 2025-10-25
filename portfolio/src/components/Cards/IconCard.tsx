@@ -1,13 +1,14 @@
 interface ProjectCardProps {
     className?: string;
+    imgClassName?: string;
     imgSrc: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ className, imgSrc }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ className, imgSrc, imgClassName }) => {
     return (
         <div className={`bg-gray-800 rounded-xl `+ className}>
-            <img src={imgSrc} alt={"error"} className="w-full object-cover p-1 " />
-        </div>
+            <img src={imgSrc} alt={"error"} className={`w-full h-full object-cover  ` + imgClassName} />
+        </div> 
     );
 }
 

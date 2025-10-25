@@ -42,7 +42,9 @@ h1::after{
   margin: 0rem auto 0 auto;
   border-radius: 0.125rem;
 }
-
+.hero-section {
+  background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

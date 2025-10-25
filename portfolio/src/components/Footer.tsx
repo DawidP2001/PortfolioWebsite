@@ -22,6 +22,7 @@ const Footer: React.FC<FooterProps> = ({className}) => {
         <a href="https://www.flaticon.com/free-icons/sql" title="sql icons">Sql icons created by Smashicons - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/asm" title="asm icons">Asm icons created by JunGSa - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/aws" title="aws icons">Aws icons created by JunGSa - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Pixel perfect - Flaticon</a>
     </footer>
   );
 };
