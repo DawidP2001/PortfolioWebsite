@@ -1,11 +1,18 @@
 import Button from "../Button";
+import "./animations.scss";
 
 interface HeroSectionProps {
   className?: string;
 }
 const HeroSection: React.FC<HeroSectionProps> = ({className}) => {
   return (
-    <section className={"hero-section min-h-screen flex flex-col items-center justify-center " + className}>
+    <section className={"hero-section min-h-screen flex flex-col items-center justify-center  page-bg" + className}>
+        <div className="animation-wrapper">
+          <div className="particle particle-1"></div>
+          <div className="particle particle-2"></div>
+          <div className="particle particle-3"></div>
+          <div className="particle particle-4"></div>
+        </div>
         <h1>Hi, I'm Dawid Pionk</h1>
         <p>Welcome to my portfolio website!</p>
         <img src="/hero.svg" alt="Hero Image" className="w-64 h-64 mt-4 mx-auto"/>

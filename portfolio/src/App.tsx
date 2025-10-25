@@ -4,13 +4,16 @@ import HomePage from './pages/HomePage'
 import Footer from './components/Footer'
 import { useState } from 'react';
 import SideMenu from './components/SideMenu';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
   return (
     <main className="bg-[var(--dominant-colour)] max-w-screen min-w-screen">
-      <Navbar setSideMenuOpen={setSideMenuOpen}/>
+      <Navbar sideMenuOpen={sideMenuOpen} setSideMenuOpen={setSideMenuOpen}/>
+      <AnimatePresence>
       {sideMenuOpen && <SideMenu setSideMenuOpen={setSideMenuOpen} />}
+      </AnimatePresence>
       <HomePage />
       <Footer />
     </main>
