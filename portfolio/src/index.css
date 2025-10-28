@@ -13,10 +13,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary-colour: #03045e;
+  --primary-colour: #B0413E;
   --primary-colour-button: rgba(35, 37, 143, 0.7);
   --secondary-colour: #0077b6;
-  --dominant-colour: #000000;
+  --dominant-colour: #E2E2E2;
+  --text-colour: #000000;
+}
+.text-colour {
+  color: var(--text-colour);
 }
 body {
   margin: 0;

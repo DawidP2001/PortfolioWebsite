@@ -16,7 +16,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className}) => {
                     className="w-9/10 mx-auto border-4 mb-4 rounded-lg"
                     style={{ borderColor: 'var(--secondary-colour)' }}
                 />
-                <div className="mx-4">
+                <div className="mx-4 text-colour">
                     <h2 className="font-bold text-3xl mb-2 text-left">Knitting Page</h2>
                     <p className="text-left">This is a description of the Knitting Page project. It showcases various knitting patterns and tutorials for enthusiasts of all levels.</p>
                     <p className="text-left">Technologies</p>
