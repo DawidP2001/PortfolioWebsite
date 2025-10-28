@@ -8,12 +8,17 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({className}) => {
     return (
-        <section className={"projects-section min-h-screen mb-20 " + className}>
+        <section 
+            className={"projects-section min-h-screen mb-20 " + className}
+            style={{
+                background: "linear-gradient(to bottom, var(--secondary-colour) 10%, var(--dominant-colour) 100%)"
+            }}
+        >
             <motion.div
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              viewport={{ once: true, amount: 0.3 }} // 'once' means animate only the first time, 'amount' is how much should be visible
+              viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
             >
             <h1 className="font-extrabold text-5xl drop-shadow-lg bg-gradient-to-r from-pink-400 via-purple-400 to-blue-300 bg-clip-text text-transparent">Featured Projects</h1>
             <h2>Here are some of the projects I've worked on:</h2>

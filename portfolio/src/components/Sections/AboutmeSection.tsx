@@ -11,7 +11,7 @@ const AboutmeSection: React.FC<AboutmeSectionProps> = ({className}) => {
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              viewport={{ once: true, amount: 0.3 }} // 'once' means animate only the first time, 'amount' is how much should be visible
+              viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
             >
               <h1 className="font-extrabold text-5xl drop-shadow-lg bg-gradient-to-r from-pink-400 via-purple-400 to-blue-300 bg-clip-text text-transparent">About Me</h1>
               <img src="/Me/1.png" alt="About Me Image" className="my-4 mx-auto rounded-full w-3/4 max-w-75 border-2"/>

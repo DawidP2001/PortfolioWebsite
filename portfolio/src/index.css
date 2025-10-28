@@ -39,7 +39,7 @@ h1::after{
   display: block;
   width: 4rem;
   height: 0.15rem;
-  background-color: var(--secondary-colour);
+  background-color: var(--primary-colour);
   margin: 0rem auto 0 auto;
   border-radius: 0.125rem;
 }
