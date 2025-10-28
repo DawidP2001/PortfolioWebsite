@@ -20,7 +20,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({className}) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-          <h1 className="z-10">Hi, I'm Dawid Pionk</h1>
+          <h1 className="z-10 font-extrabold text-5xl">
+          Hi, I'm <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-blue-300 bg-clip-text text-transparent drop-shadow-lg">Dawid Pionk</span>
+        </h1>
           <p className="z-10">Welcome to my portfolio website!</p>
           <img src="/hero.svg" alt="Hero Image" className="w-64 h-64 mt-4 mx-auto z-10"/>
           <div className="flex flex-row items-center justify-center mt-6 z-10 space-x-4 mx-2">

@@ -1,10 +1,17 @@
+import React from "react";
+
 interface FooterProps {
   className?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({className}) => {
+  const [showLicenses, setShowLicenses] = React.useState(false);
   return (
-    <footer className={"w-full bg-gray-600 text-center p-3 " + className}>
+    <footer className={"w-full bg-gray-700 text-center p-3 text-sm " + className}>
+        Click Here to view the licenses for the different icons used in this website:
+        <button className="underline ml-2" onClick={() => setShowLicenses(!showLicenses)}> {showLicenses ? "Hide Licenses" : "Show Licenses"} </button>
+        {showLicenses && 
+        <div className="flex flex-col space-y-1 mt-2 text-sm">
         <a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons created by Febrian Hidayat - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/coding" title="coding icons">Coding icons created by Kiranshastry - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/neural-network" title="neural network icons">Neural network icons created by Paul J. - Flaticon</a>
@@ -23,6 +30,8 @@ const Footer: React.FC<FooterProps> = ({className}) => {
         <a href="https://www.flaticon.com/free-icons/asm" title="asm icons">Asm icons created by JunGSa - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/aws" title="aws icons">Aws icons created by JunGSa - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Pixel perfect - Flaticon</a>
+        </div>
+        }
     </footer>
   );
 };
