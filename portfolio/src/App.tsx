@@ -6,6 +6,9 @@
  *  1. Do the projects page
  *  2. Add an experience section
  *  3. Add more animations
+ *  4. Apply to project cards
+ *      - Add technologies
+ *      - add go to project button
  */
 import Navbar from './components/Navbar'
 import './App.css'
