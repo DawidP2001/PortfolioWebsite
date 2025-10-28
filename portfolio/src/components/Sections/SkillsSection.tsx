@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import IconCard from "../Cards/IconCard";
 
 interface ContactSectionProps {
@@ -6,6 +7,12 @@ interface ContactSectionProps {
 const ContactSection: React.FC<ContactSectionProps> = ({className}) => {
     return (
         <section className={"contact-section my-10 " + className}>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true, amount: 0.3 }} // 'once' means animate only the first time, 'amount' is how much should be visible
+            >
             <h1 className="mb-6">Skills</h1>
             <div className="grid grid-cols-6 mx-2 gap-2">
                 <IconCard imgSrc="/SkillIcons/atom.png" className="w-full h-full"/>
@@ -33,6 +40,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({className}) => {
                 <IconCard imgSrc="/SkillIcons/nodejs.png" className="w-full h-full"/>
                 <IconCard imgSrc="/SkillIcons/tensorflow.png" className="w-full h-full"/>
             </div>
+            </motion.div>
         </section>
     );
 };

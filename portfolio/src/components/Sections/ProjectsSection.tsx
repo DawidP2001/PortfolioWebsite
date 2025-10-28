@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ProjectCard from "../Cards/ProjectCard";
 
 interface ProjectsSectionProps {
@@ -7,6 +8,12 @@ interface ProjectsSectionProps {
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({className}) => {
     return (
         <section className={"projects-section min-h-screen " + className}>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true, amount: 0.3 }} // 'once' means animate only the first time, 'amount' is how much should be visible
+            >
             <h1>Featured Projects</h1>
             <h2>Here are some of the projects I've worked on:</h2>
             <div className="p-5">
@@ -36,6 +43,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className}) => {
                 <p>View all projects</p>
                 <img src="/Icons/right.png" alt="Arrow Right Icon" className="w-5 mt-[5px] [filter:invert(90%)]"/>
             </div>
+            </motion.div>
         </section>
     );
 };
