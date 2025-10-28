@@ -1,18 +1,16 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../Cards/ProjectCard";
-import Button from "../Button";
 
 interface ProjectsSectionProps {
     className?: string;
+    setSelectedProject: (project: string) => void;
+    setSelectedPage: (page: string) => void;
 }
 
-const ProjectsSection: React.FC<ProjectsSectionProps> = ({className}) => {
+const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelectedProject, setSelectedPage}) => {
     return (
         <section 
-            className={"projects-section min-h-screen mb-20 " + className}
-            style={{
-                background: "linear-gradient(to bottom, var(--secondary-colour) 10%, var(--dominant-colour) 100%)"
-            }}
+            className={"projects-section min-h-screen mb-10 " + className}
         >
             <motion.div
               initial={{ opacity: 0, y: 80 }}
@@ -20,33 +18,41 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className}) => {
               transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
             >
-            <h1 className="font-extrabold text-5xl drop-shadow-lg bg-gradient-to-r from-pink-400 via-purple-400 to-blue-300 bg-clip-text text-transparent">Featured Projects</h1>
-            <h2>Here are some of the projects I've worked on:</h2>
+            <h1 className="one">Featured Projects</h1>
+            <h2 className="text-black mb-5">Here are some of the projects I've worked on:</h2>
             <div className="px-5 mb-5">
                 <ProjectCard
                     imgSrc="/ProjectImages/Caillougarage.png"
                     title="Knitting Page"
                     description="This is a description of Project One."
                     className=""
+                    onClick={() => { setSelectedProject("Knitting Page"); setSelectedPage("projects"); }}
                 />
                 <ProjectCard
                     imgSrc="/ProjectImages/RedditSentiment.png"
                     title="Reddit Setntiment Analysis"
                     description="This is a description of Project One."
+                    className=""
+                    onClick={() => { setSelectedProject("Reddit Sentiment Analysis"); setSelectedPage("projects"); }}
                 />
                 <ProjectCard
                     imgSrc="/ProjectImages/AssemblyGame.png"
                     title="Assembly Space Shooter"
                     description="This is a description of Project One."
+                    className=""
+                    onClick={() => { setSelectedProject("Assembly Space Shooter"); setSelectedPage("projects"); }}
                 />
                 <ProjectCard
                     imgSrc="/ProjectImages/MLPortfolio.png"
                     title="Machine Learning Portfolio"
                     description="This is a description of Project One."
+                    className=""
+                    onClick={() => { setSelectedProject("Machine Learning Portfolio"); setSelectedPage("projects"); }}
                 />
             </div>
             <div className="flex items-center justify-center space-x-2 cursor-pointer hover:underline">
-                <Button label="View All Projects" onClick={() => {}} className="bg-blue-800"></Button>
+                <button onClick={() => {}} className="text-black font-medium" style={{}} >View All Projects</button>
+                <img src="/Icons/arrow.png" alt="Arrow Right" className="inline-block w-4 h-4" />
             </div>
             </motion.div>
         </section>

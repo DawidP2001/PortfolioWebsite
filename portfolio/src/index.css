@@ -13,7 +13,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary-colour: #B0413E;
+  --primary-colour: #592E83;
   --primary-colour-button: rgba(35, 37, 143, 0.7);
   --secondary-colour: #0077b6;
   --dominant-colour: #E2E2E2;
@@ -30,22 +30,34 @@ body {
   min-height: 100vh;
   background-color: var(--dominant-colour);
   overflow-x: hidden;
+  color: var(--text-colour);
 }
 
 h1 {
-  font-family: Inter, sans-serif;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 1.1;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
-h1::after{
-  content: "";
+
+h1 span {
   display: block;
-  width: 4rem;
-  height: 0.15rem;
-  background-color: var(--primary-colour);
-  margin: 0rem auto 0 auto;
-  border-radius: 0.125rem;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+p {
+  color: var(--text-colour);
 }
 .hero-section {
   position: relative;

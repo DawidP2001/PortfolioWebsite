@@ -6,15 +6,17 @@ import SkillsSection from "../components/Sections/SkillsSection";
 
 interface HomePageProps {
   className?: string;
+  setSelectedPage: (page: string) => void;
+  setSelectedProject: (project: string) => void;
 }
 
-const HomePage: React.FC<HomePageProps> = ({className}) => {
+const HomePage: React.FC<HomePageProps> = ({className, setSelectedPage, setSelectedProject}) => {
     return (
         <div className={"home-page min-h-screen text-white " + className}>
             <HeroSection />
             <AboutmeSection />
             <SkillsSection />
-            <ProjectsSection />
+            <ProjectsSection setSelectedProject={setSelectedProject} setSelectedPage={setSelectedPage}/>
             <ContactSection />
         </div>
     );

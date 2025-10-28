@@ -8,7 +8,6 @@ const ContactSection: React.FC<ContactSectionProps> = ({className}) => {
     return (
         <section 
             className={"contact-section pb-20 " + className}
-            style={{background: "linear-gradient(to bottom, var(--dominant-colour) 80%, var(--secondary-colour) 100%"}}
         >
             <motion.div
               initial={{ opacity: 0, y: 80 }}
@@ -16,7 +15,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({className}) => {
               transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
             >
-            <h1 className="font-extrabold text-5xl drop-shadow-lg mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-300 bg-clip-text text-transparent">Skills</h1>
+            <h1 className="">Skills</h1>
             <div className="grid grid-cols-6 mx-2 gap-2">
                 <IconCard imgSrc="/SkillIcons/atom.png" className="w-full h-full"/>
                 <IconCard imgSrc="/SkillIcons/ASM.png" className="w-full h-full" imgClassName="bg-gray-200 rounded-xl"/>

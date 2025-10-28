@@ -2,12 +2,13 @@ import ProjectThumbnail from "../components/Cards/ProjectThumbnail";
 
 interface ProjectPageProps {
   className?: string;
-  setPage?: (page: string) => void;
+  setSelectedProject: (project: string) => void;
+  selectedProject: string;
 }
 
-const ProjectPage: React.FC<ProjectPageProps> = ({className}) => {
+const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject, selectedProject}) => {
     return (
-        <div className={"project-page min-h-screen text-white bg-[var(--dominant-colour)] " + className}>
+        <div className={"mt-10 project-page min-h-screen text-white bg-[var(--dominant-colour)] " + className}>
             <h1 className="font-extrabold text-5xl drop-shadow-lg mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-300 bg-clip-text text-transparent mt-10">Projects</h1>
             <div className="mb-8">
                 <img 
@@ -45,16 +46,19 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className}) => {
                     imgSrc="/ProjectImages/Caillougarage.png"
                     title="Knitting Page"
                     className=""
+                    onclick={() => setSelectedProject("Knitting Page")}
                 />
                 <ProjectThumbnail
                     imgSrc="/ProjectImages/wator.png"
                     title="Wa-Tor Simulation"
                     className=""
+                    onclick={() => setSelectedProject("Wa-Tor Simulation")}
                 />
                 <ProjectThumbnail
                     imgSrc="/ProjectImages/MLPortfolio.png"
                     title="Machine Learning Portfolio"
                     className=""
+                    onclick={() => setSelectedProject("Machine Learning Portfolio")}
                 />
                 </div>
                 <div>
@@ -62,16 +66,19 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className}) => {
                     imgSrc="/ProjectImages/AssemblyGame.png"
                     title="Assembly Game"
                     className=""
+                    onclick={() => setSelectedProject("Assembly Game")}
                 />
                 <ProjectThumbnail
                     imgSrc="/ProjectImages/Bytecode.png"
                     title="Java Bytecode Interpreter"
                     className=""
+                    onclick={() => setSelectedProject("Java Bytecode Interpreter")}
                 />
                 <ProjectThumbnail
                     imgSrc="/ProjectImages/RedditSentiment.png"
                     title="Reddit Sentiment Analyser"
                     className=""
+                    onclick={() => setSelectedProject("Reddit Sentiment Analyser")}
                 />
                 </div>
             </div>
