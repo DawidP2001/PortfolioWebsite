@@ -1,3 +1,10 @@
+/**
+ * App.tsx
+ * Main application component.
+ * 
+ * To Do:
+ *  1. fix the background animation so it wouldnt act weird on mobile
+ */
 import Navbar from './components/Navbar'
 import './App.css'
 import HomePage from './pages/HomePage'

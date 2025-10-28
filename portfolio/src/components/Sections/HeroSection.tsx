@@ -6,20 +6,20 @@ interface HeroSectionProps {
 }
 const HeroSection: React.FC<HeroSectionProps> = ({className}) => {
   return (
-    <section className={"hero-section min-h-screen flex flex-col items-center justify-center  page-bg" + className}>
+    <section className={"hero-section min-h-screen flex flex-col items-center justify-center " + className}>
         <div className="animation-wrapper">
           <div className="particle particle-1"></div>
           <div className="particle particle-2"></div>
           <div className="particle particle-3"></div>
           <div className="particle particle-4"></div>
         </div>
-        <h1>Hi, I'm Dawid Pionk</h1>
-        <p>Welcome to my portfolio website!</p>
-        <img src="/hero.svg" alt="Hero Image" className="w-64 h-64 mt-4 mx-auto"/>
-        <div className="flex items-center justify-center mt-6">
-          <Button label="View Projects" onClick={() => {}} className=""/>
-          <Button label="Contact Me" onClick={() => {}} className=""/>
-          <Button label="Download Resume" onClick={() => {}} className=""/>
+        <h1 className="z-10">Hi, I'm Dawid Pionk</h1>
+        <p className="z-10">Welcome to my portfolio website!</p>
+        <img src="/hero.svg" alt="Hero Image" className="w-64 h-64 mt-4 mx-auto z-10"/>
+        <div className="flex items-center justify-center mt-6 z-10 space-x-4 mx-2">
+          <Button label="View Projects" onClick={() => {}} className="z-10"/>
+          <Button label="Contact Me" onClick={() => {}} className="z-10"/>
+          <Button label="Download Resume" onClick={() => {}} className="z-10"/>
         </div>
     </section>
   );
