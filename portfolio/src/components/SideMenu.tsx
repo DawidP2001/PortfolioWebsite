@@ -3,9 +3,10 @@ import { motion } from 'framer-motion';
 interface SideMenuProps {
   className?: string;
   setSideMenuOpen: (open: boolean) => void;
+  setPage: (page: string) => void;
 }
 
-const SideMenu: React.FC<SideMenuProps> = ({className, setSideMenuOpen}) => {
+const SideMenu: React.FC<SideMenuProps> = ({className, setSideMenuOpen, setPage}) => {
   return (
     <motion.div 
         initial={{ x: '-100%' }}
@@ -18,10 +19,11 @@ const SideMenu: React.FC<SideMenuProps> = ({className, setSideMenuOpen}) => {
     >
         <img src="/Icons/close.png" alt="Close Icon" className="w-8 h-8 z-10 absolute m-4 top-2 right-0"/>
         <div className="flex flex-col items-start space-y-10 mt-5 p-2">
-            <a className="text-3xl">About Me</a>
-            <a className="text-3xl">Skills</a>
-            <a className="text-3xl">Projects</a>
-            <a className="text-3xl">Contact</a>
+            <a className="text-3xl" onClick={() => setPage("home")}>Home</a>
+            <a className="text-3xl" onClick={() => setPage("home")}>About Me</a>
+            <a className="text-3xl" onClick={() => setPage("home")}>Skills</a>
+            <a className="text-3xl" onClick={() => setPage("projects")}>Projects</a>
+            <a className="text-3xl" onClick={() => setPage("home")}>Contact</a>
         </div>
     </motion.div>
   );
