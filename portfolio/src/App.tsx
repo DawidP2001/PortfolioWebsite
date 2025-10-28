@@ -3,7 +3,8 @@
  * Main application component.
  * 
  * To Do:
- *  1. fix the background animation so it wouldnt act weird on mobile
+ *  1. Do the projects page
+ *  2. Add an experience section
  */
 import Navbar from './components/Navbar'
 import './App.css'
