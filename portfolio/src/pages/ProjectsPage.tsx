@@ -1,5 +1,7 @@
+import Button from "../components/Button";
 import ProjectThumbnail from "../components/Cards/ProjectThumbnail";
 import SectionTitle from "../components/SectionTitle";
+import Tag from "../components/Tag";
 
 interface ProjectPageProps {
   className?: string;
@@ -9,19 +11,26 @@ interface ProjectPageProps {
 
 const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject, selectedProject}) => {
     return (
-        <div className={"mt-10 project-page min-h-screen text-white bg-[var(--dominant-colour)] " + className}>
+        <div className={"mt-10 project-page min-h-screen bg-[var(--dominant-colour)] " + className}>
             <SectionTitle title="Projects" className=""/>
-            <div className="mb-8 shadow-lg m-2 rounded-lg p-2">
+            <div className="mb-8 shadow-lg m-2 rounded-lg bg-white">
                 <img 
                     src="/ProjectImages/Caillougarage.png" 
                     alt="Project Image" 
-                    className="mx-auto mb-4 rounded-lg p-2"
+                    className="mx-auto pb-4 rounded-lg px-4"
                 />
                 <div className="mx-4 text-colour">
-                    <h2 className="font-semibold text-3xl mb-2 text-left text-gray-800">Knitting Page</h2>
+                    <div className="flex gap-1">
+                        <Tag text="React" className=""/>
+                        <Tag text="TypeScript" className=""/>
+                    </div>
+                    <h2 className="font-semibold text-3xl text-left text-gray-800">Knitting Page</h2>
                     <p className="text-left text-gray-600">This is a description of the Knitting Page project. It showcases various knitting patterns and tutorials for enthusiasts of all levels.</p>
                     <p className="text-left text-gray-600">Technologies</p>
-                    <p className="text-left text-gray-600">Link</p>
+                    <div className="flex gap-1">
+                        <Button label="Github" size="small" className="my-2"/>
+                        <Button label="Website" size="small" className="my-2"/>
+                    </div>
                 </div>
             </div>
             <div className="flex flex-row sm:flex-row gap-4 mx-2 mb-8 items-center justify-center">
