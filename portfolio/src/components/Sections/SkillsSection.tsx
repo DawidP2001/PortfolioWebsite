@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import IconCard from "../Cards/IconCard";
+import SectionTitle from "../SectionTitle";
 
 interface ContactSectionProps {
     className?: string;
@@ -15,7 +16,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({className}) => {
               transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
             >
-            <h1 className="">Skills</h1>
+            <SectionTitle title="Skills" className=""/>
             <div className="grid grid-cols-6 mx-2 gap-2">
                 <IconCard imgSrc="/SkillIcons/atom.png" className="w-full h-full"/>
                 <IconCard imgSrc="/SkillIcons/ASM.png" className="w-full h-full" imgClassName="bg-gray-200 rounded-xl"/>

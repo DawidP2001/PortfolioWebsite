@@ -1,4 +1,5 @@
 import ProjectThumbnail from "../components/Cards/ProjectThumbnail";
+import SectionTitle from "../components/SectionTitle";
 
 interface ProjectPageProps {
   className?: string;
@@ -9,19 +10,18 @@ interface ProjectPageProps {
 const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject, selectedProject}) => {
     return (
         <div className={"mt-10 project-page min-h-screen text-white bg-[var(--dominant-colour)] " + className}>
-            <h1 className="font-extrabold text-5xl drop-shadow-lg mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-300 bg-clip-text text-transparent mt-10">Projects</h1>
-            <div className="mb-8">
+            <SectionTitle title="Projects" className=""/>
+            <div className="mb-8 shadow-lg m-2 rounded-lg p-2">
                 <img 
                     src="/ProjectImages/Caillougarage.png" 
                     alt="Project Image" 
-                    className="w-9/10 mx-auto border-4 mb-4 rounded-lg"
-                    style={{ borderColor: 'var(--secondary-colour)' }}
+                    className="mx-auto mb-4 rounded-lg p-2"
                 />
                 <div className="mx-4 text-colour">
-                    <h2 className="font-bold text-3xl mb-2 text-left">Knitting Page</h2>
-                    <p className="text-left">This is a description of the Knitting Page project. It showcases various knitting patterns and tutorials for enthusiasts of all levels.</p>
-                    <p className="text-left">Technologies</p>
-                    <p className="text-left">Link</p>
+                    <h2 className="font-semibold text-3xl mb-2 text-left text-gray-800">Knitting Page</h2>
+                    <p className="text-left text-gray-600">This is a description of the Knitting Page project. It showcases various knitting patterns and tutorials for enthusiasts of all levels.</p>
+                    <p className="text-left text-gray-600">Technologies</p>
+                    <p className="text-left text-gray-600">Link</p>
                 </div>
             </div>
             <div className="flex flex-row sm:flex-row gap-4 mx-2 mb-8 items-center justify-center">

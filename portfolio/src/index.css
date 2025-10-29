@@ -13,15 +13,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary-colour: #592E83;
+  --primary-colour: #ff5050;
   --primary-colour-button: rgba(35, 37, 143, 0.7);
   --secondary-colour: #0077b6;
   --dominant-colour: #E2E2E2;
   --text-colour: #000000;
 }
-.text-colour {
-  color: var(--text-colour);
-}
+
 body {
   margin: 0;
   display: flex;
@@ -33,38 +31,27 @@ body {
   color: var(--text-colour);
 }
 
-h1 {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 0.5rem;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 40px;
-  color: #080808;
-  -webkit-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
-}
-
-h1 span {
-  display: block;
-  font-size: 0.5em;
-  line-height: 1.3;
-}
-h1 em {
-  font-style: normal;
-  font-weight: 600;
-}
-p {
-  color: var(--text-colour);
-}
 .hero-section {
   position: relative;
   background: var(--secondary-colour);
   z-index: 2;
 }
-
+.section-title {
+  position: relative;
+  display: inline-block; /* So the underline matches the title width */
+  margin-bottom: 1rem;   /* Optional: space below the title */
+}
+.section-title::after{
+  background: var(--primary-colour);
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;           /* Slightly more space below */
+  width: 40%;             /* Adjust width as needed */
+  height: 4px;
+  border-radius: 2px;     /* Optional: rounded underline */
+}
 .aboutme-section {
   position: relative;
   background: linear-gradient(0deg, var(--dominant-colour) 60%, var(--secondary-colour) 100%);
