@@ -15,7 +15,7 @@ const AboutmeSection: React.FC<AboutmeSectionProps> = ({className}) => {
               viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
               className="max-w-[400px] sm:max-w-[1000px]"
             >
-              <SectionTitle title="About Me" className=""/>
+              <SectionTitle title="About Me" className="sm:mb-0"/>
               <div className="sm:flex items-center justify-center space-x-10 sm:mx-4">
                 <img src="/Me/1.png" alt="About Me Image" className="my-4 mx-auto rounded-full w-3/4 max-w-75 border-2"/>
                 <p className="text-left px-5 text-base text-gray-800">

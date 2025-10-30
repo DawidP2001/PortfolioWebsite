@@ -26,8 +26,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
               viewport={{ once: true, amount: 0.1 }}
                 className="max-w-[400px] sm:max-w-[1280px]"
             >
-            <SectionTitle title="Projects" className=""/>
-            <h2 className="text-black mb-2 mx-2">Here are some of the projects I've worked on:</h2>
+            <SectionTitle title="Projects" className="sm:mb-12"/>
+            <h2 className="text-black mb-2 mx-2 sm:hidden">Here are some of the projects I've worked on:</h2>
             <div className="px-5 mb-5 sm:grid sm:grid-cols-3 sm:gap-4">
                 {allProjects.map((project, index) => {
                     const isVisibleOnMobile = mobileProjectNames.includes(project.name);
@@ -42,15 +42,17 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
                                 links={project.links}
                                 className={isVisibleOnMobile ? "" : "hidden sm:block"}
                                 onClick={() => { 
-                                    setSelectedProject(project.name); 
-                                    navigate("/projects"); 
+                                    if (window.innerWidth < 640) { 
+                                        setSelectedProject(project.name); 
+                                        navigate("/projects"); 
+                                    }
                                 }}
                             />
                         
                     );
                 })}
             </div>
-            <div className="flex items-center justify-center space-x-2 cursor-pointer hover:underline">
+            <div className="flex items-center justify-center space-x-2 cursor-pointer hover:underline sm:hidden">
                 <button onClick={() => { navigate("/projects"); }} className="text-red-600 font-medium">
                     View All Projects
                     <img
