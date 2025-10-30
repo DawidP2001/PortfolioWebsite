@@ -20,7 +20,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
               viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
             >
             <SectionTitle title="Projects" className=""/>
-            <h2 className="text-black mb-5">Here are some of the projects I've worked on:</h2>
+            <h2 className="text-black mb-2 mx-2">Here are some of the projects I've worked on:</h2>
             <div className="px-5 mb-5">
                 <ProjectCard
                     imgSrc="/ProjectImages/Caillougarage.png"
@@ -52,16 +52,18 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
                 />
             </div>
             <div className="flex items-center justify-center space-x-2 cursor-pointer hover:underline">
-                <button onClick={() => {}} className="text-red-600 font-medium" style={{}} >View All Projects</button>
-                <img
-                    src="/Icons/arrow.png"
-                    alt="Arrow Right"
-                    className="inline-block w-4 h-4"
-                    style={{
-                        filter:
-                            "invert(20%) sepia(97%) saturate(7492%) hue-rotate(357deg) brightness(90%) contrast(110%)",
-                    }}
-                />
+                <button onClick={() => {setSelectedPage("projects")}} className="text-red-600 font-medium" style={{}} >
+                    View All Projects
+                    <img
+                        src="/Icons/arrow.png"
+                        alt="Arrow Right"
+                        className="inline-block w-4 h-4 ml-1"
+                        style={{
+                            filter:
+                                "invert(20%) sepia(97%) saturate(7492%) hue-rotate(357deg) brightness(90%) contrast(110%)",
+                        }}
+                    />
+                </button>
             </div>
             </motion.div>
         </section>

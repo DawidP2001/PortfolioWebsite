@@ -1,7 +1,10 @@
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 import Button from "../components/Button";
 import ProjectThumbnail from "../components/Cards/ProjectThumbnail";
 import SectionTitle from "../components/SectionTitle";
 import Tag from "../components/Tag";
+import { allProjects } from "../data/constants";
 
 interface ProjectPageProps {
   className?: string;
@@ -10,37 +13,76 @@ interface ProjectPageProps {
 }
 
 const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject, selectedProject}) => {
+    const selectedProjectData = allProjects.find(project => project.name === selectedProject);
+    
+    useEffect(() => {
+        window.scrollTo({ top: 0 });
+    }, []);
     return (
         <div className={"mt-10 project-page min-h-screen bg-[var(--dominant-colour)] " + className}>
             <SectionTitle title="Projects" className=""/>
-            <div className="mb-8 shadow-lg m-2 rounded-lg bg-white">
+            {selectedProjectData &&
+            <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-12 shadow-lg m-2 rounded-lg bg-white"
+            >
                 <img 
-                    src="/ProjectImages/Caillougarage.png" 
+                    src={selectedProjectData?.imgSrc}
                     alt="Project Image" 
-                    className="mx-auto pb-4 rounded-lg px-4"
+                    className="mx-auto py-4 rounded-lg px-4"
                 />
                 <div className="mx-4 text-colour">
-                    <div className="flex gap-1">
-                        <Tag text="React" className=""/>
-                        <Tag text="TypeScript" className=""/>
+                    <div className="flex flex-wrap justify-left gap-1">
+                        {selectedProjectData?.technologies.map((tech, index) => (
+                            <Tag key={index} text={tech} className=""/>
+                        ))}
                     </div>
-                    <h2 className="font-semibold text-3xl text-left text-gray-800">Knitting Page</h2>
-                    <p className="text-left text-gray-600">This is a description of the Knitting Page project. It showcases various knitting patterns and tutorials for enthusiasts of all levels.</p>
-                    <p className="text-left text-gray-600">Technologies</p>
-                    <div className="flex gap-1">
-                        <Button label="Github" size="small" className="my-2"/>
-                        <Button label="Website" size="small" className="my-2"/>
+                    <h2 className="font-semibold text-2xl text-left text-gray-800 pt-4 ">{selectedProjectData?.name}</h2>
+                    <p className="text-left text-gray-600 pb-4">{selectedProjectData?.description}</p>
+                    <div className="flex gap-1 pb-2">
+                        {selectedProjectData?.links.github && (
+                            <Button 
+                                label="Github" 
+                                size="small" 
+                                className="my-2"
+                                onClick={() => window.open(selectedProjectData.links.github, '_blank')}
+                            />
+                        )}
+                        {selectedProjectData?.links.website && (
+                            <Button 
+                                label="Website" 
+                                size="small" 
+                                className="my-2"
+                                onClick={() => window.open(selectedProjectData.links.website, '_blank')}
+                            />
+                        )}
+                        {selectedProjectData?.links.youtube && (
+                            <Button 
+                                label="YouTube" 
+                                size="small" 
+                                className="my-2"
+                                onClick={() => window.open(selectedProjectData.links.youtube, '_blank')}
+                            />
+                        )}
                     </div>
                 </div>
-            </div>
-            <div className="flex flex-row sm:flex-row gap-4 mx-2 mb-8 items-center justify-center">
+            </motion.div>
+            }
+            <motion.div 
+                initial={{ opacity: 0, y: 80 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="flex flex-row sm:flex-row gap-4 mx-4 mt-4 mb-4 items-center justify-center"
+            >
                 <input
                     type="text"
                     placeholder="Search projects..."
-                    className="px-4 py-2 rounded-lg text-gray-500 bg-white h-10 w-3/4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="px-2 py-2 rounded-lg text-gray-500 bg-white h-10 w-3/4 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
                 <select
-                    className="text-xs px-4 py-3 rounded-lg text-gray-500 bg-white h-10 h-full w-3/8 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="text-xs py-3 rounded-lg text-gray-500 bg-white h-10 h-full focus:outline-none focus:ring-2 focus:ring-blue-400"
                     defaultValue="default"
                 >
                     <option value="default" disabled>Sort by</option>
@@ -48,14 +90,21 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject,
                     <option value="date">Date</option>
                     <option value="tech">Technology</option>
                 </select>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-4 mb-10">
+            </motion.div>
+            <motion.div 
+                initial={{ opacity: 0, y: 80 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-4 mb-10"
+            >
                 <div>
                 <ProjectThumbnail
                     imgSrc="/ProjectImages/Caillougarage.png"
                     title="Knitting Page"
                     className=""
-                    onclick={() => setSelectedProject("Knitting Page")}
+                    onclick={() => {
+                        setSelectedProject("Knitting Page");
+                    }}
                 />
                 <ProjectThumbnail
                     imgSrc="/ProjectImages/wator.png"
@@ -68,6 +117,13 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject,
                     title="Machine Learning Portfolio"
                     className=""
                     onclick={() => setSelectedProject("Machine Learning Portfolio")}
+                />
+                <ProjectThumbnail
+                    underDevelopment
+                    imgSrc="/ProjectImages/flappy-dog.png"
+                    title="Flappy dog"
+                    className=""
+                    onclick={() => setSelectedProject("Reddit Sentiment Analyser")}
                 />
                 </div>
                 <div>
@@ -89,8 +145,15 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject,
                     className=""
                     onclick={() => setSelectedProject("Reddit Sentiment Analyser")}
                 />
+                <ProjectThumbnail
+                    underDevelopment
+                    imgSrc="/ProjectImages/RedditSentiment.png"
+                    title="Portfolio Website"
+                    className=""
+                    onclick={() => setSelectedProject("Portfolio Website")}
+                />
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };
