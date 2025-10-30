@@ -13,14 +13,16 @@ const AboutmeSection: React.FC<AboutmeSectionProps> = ({className}) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
-              className="max-w-[400px]"
+              className="max-w-[400px] sm:max-w-[1000px]"
             >
               <SectionTitle title="About Me" className=""/>
-              <img src="/Me/1.png" alt="About Me Image" className="my-4 mx-auto rounded-full w-3/4 max-w-75 border-2"/>
-              <p className="text-left px-5 text-base text-gray-800">
-                I am a recent graduate from South East Technological University with First Class Honours in Bachelor of Science (Honours) in Software Engineering. I am passionate in the fields of Full-Stack-Development, Cloud Computing and Machine Learning.
-                <br></br><br></br>You can check out my projects such as sentiment analysis for Reddit, an assembly space shooter arcade game as well as java bytecode interpreter teaching tool. I also have a machine learning portfolio containing notebooks of several models I have studied.
-              </p>
+              <div className="sm:flex items-center justify-center space-x-10 sm:mx-4">
+                <img src="/Me/1.png" alt="About Me Image" className="my-4 mx-auto rounded-full w-3/4 max-w-75 border-2"/>
+                <p className="text-left px-5 text-base text-gray-800">
+                  I am a recent graduate from South East Technological University with First Class Honours in Bachelor of Science (Honours) in Software Engineering. I am passionate in the fields of Full-Stack-Development, Cloud Computing and Machine Learning.
+                  <br></br><br></br>You can check out my projects such as sentiment analysis for Reddit, an assembly space shooter arcade game as well as java bytecode interpreter teaching tool. I also have a machine learning portfolio containing notebooks of several models I have studied.
+                </p>
+              </div>
             </motion.div>
         </section>
     );

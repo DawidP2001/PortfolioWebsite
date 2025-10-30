@@ -19,16 +19,23 @@ const HeroSection: React.FC<HeroSectionProps> = ({className}) => {
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
+            className="sm:flex items-center justify-center space-x-10 mx-4"
           >
-          <h1 className="z-10 font-extrabold text-5xl">
-          Hi, I'm Dawid Pionk
-        </h1>
-          <p className="z-10 text-white">Welcome to my portfolio website!</p>
-          <img src="/hero.svg" alt="Hero Image" className="w-64 h-64 mt-4 mx-auto z-10"/>
-          <div className="flex flex-row items-center justify-center mt-6 z-10 space-x-4 mx-2">
-            <Button label="Download Resume" onClick={() => {}} className="z-10"/>
-            <Button label="Contact Me" onClick={() => {}} className="z-10"/>
-          </div>
+            <div>
+              <h1 className="z-10 font-extrabold text-5xl">
+                Hi, I'm Dawid Pionk
+              </h1>
+              <p className="z-10 text-white">Welcome to my portfolio website!</p>
+              <div className="hidden sm:flex flex-row items-center justify-center mt-6 z-10 space-x-4 mx-2">
+                <Button label="Download Resume" onClick={() => {}} className="z-10"/>
+                <Button label="Contact Me" onClick={() => {}} className="z-10"/>
+              </div>
+            </div>
+            <img src="/hero.svg" alt="Hero Image" className="w-64 h-64 sm:w-100 sm:h-100 mt-4 mx-auto z-10"/>
+            <div className="sm:hidden flex flex-row items-center justify-center mt-6 z-10 space-x-4 mx-2">
+              <Button label="Download Resume" onClick={() => {}} className="z-10"/>
+              <Button label="Contact Me" onClick={() => {}} className="z-10"/>
+            </div>
           </motion.div>
       </section>
   );

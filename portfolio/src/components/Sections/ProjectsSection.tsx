@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import ProjectCard from "../Cards/ProjectCard";
 import SectionTitle from "../SectionTitle";
+import { allProjects } from "../../data/constants";
 
 interface ProjectsSectionProps {
     className?: string;
@@ -10,6 +11,10 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelectedProject}) => {
     const navigate = useNavigate();
+    
+    // Define which projects to show on mobile (first 4)
+    const mobileProjectNames = ["Knitting Page", "Reddit Sentiment Analyser", "Assembly Game", "Machine Learning Portfolio"];
+    
     return (
         <section 
             className={"projects-section min-h-screen mb-10 flex justify-center " + className}
@@ -18,43 +23,35 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
-                className="max-w-[400px]"
+              viewport={{ once: true, amount: 0.1 }}
+                className="max-w-[400px] sm:max-w-[1280px]"
             >
             <SectionTitle title="Projects" className=""/>
             <h2 className="text-black mb-2 mx-2">Here are some of the projects I've worked on:</h2>
-            <div className="px-5 mb-5">
-                <ProjectCard
-                    imgSrc="/ProjectImages/Caillougarage.png"
-                    title="Knitting Page"
-                    description="This is a description of Project One."
-                    className=""
-                    onClick={() => { setSelectedProject("Knitting Page"); navigate("/projects"); }}
-                />
-                <ProjectCard
-                    imgSrc="/ProjectImages/RedditSentiment.png"
-                    title="Reddit Setntiment Analysis"
-                    description="This is a description of Project One."
-                    className=""
-                    onClick={() => { setSelectedProject("Reddit Sentiment Analysis"); navigate("/projects"); }}
-                />
-                <ProjectCard
-                    imgSrc="/ProjectImages/AssemblyGame.png"
-                    title="Assembly Space Shooter"
-                    description="This is a description of Project One."
-                    className=""
-                    onClick={() => { setSelectedProject("Assembly Space Shooter"); navigate("/projects"); }}
-                />
-                <ProjectCard
-                    imgSrc="/ProjectImages/MLPortfolio.png"
-                    title="Machine Learning Portfolio"
-                    description="This is a description of Project One."
-                    className=""
-                    onClick={() => { setSelectedProject("Machine Learning Portfolio"); navigate("/projects"); }}
-                />
+            <div className="px-5 mb-5 sm:grid sm:grid-cols-3 sm:gap-4">
+                {allProjects.map((project, index) => {
+                    const isVisibleOnMobile = mobileProjectNames.includes(project.name);
+                    return (
+                        
+                            <ProjectCard
+                                key={project.id}
+                                imgSrc={project.imgSrc}
+                                title={project.name}
+                                description={project.description}
+                                technologies={project.technologies}
+                                links={project.links}
+                                className={isVisibleOnMobile ? "" : "hidden sm:block"}
+                                onClick={() => { 
+                                    setSelectedProject(project.name); 
+                                    navigate("/projects"); 
+                                }}
+                            />
+                        
+                    );
+                })}
             </div>
             <div className="flex items-center justify-center space-x-2 cursor-pointer hover:underline">
-                <button onClick={() => { navigate("/projects"); }} className="text-red-600 font-medium" style={{}} >
+                <button onClick={() => { navigate("/projects"); }} className="text-red-600 font-medium">
                     View All Projects
                     <img
                         src="/Icons/arrow.png"

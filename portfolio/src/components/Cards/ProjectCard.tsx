@@ -1,23 +1,61 @@
 import Button from "../Button";
+import Tag from "../Tag";
 
 interface ProjectCardProps {
     title: string;
     description: string;
+    onClick: () => void;
+    technologies?: string[];
+    links?: {
+        github?: string;
+        website?: string;
+        youtube?: string;
+    };
     className?: string;
     imgSrc?: string;
-    onClick: () => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, className, imgSrc, onClick }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, className, imgSrc, onClick, technologies, links }) => {
     return (
-        <div className={`mb-12 rounded shadow-lg border-l-4 border-[var(--primary-colour)] `+ className} onClick={onClick}>
+        <div className={`bg-white rounded shadow-lg border-l-4 border-[var(--primary-colour)] `+ className} onClick={onClick}>
             <img src={imgSrc} alt={title} className="w-full object-cover mb-1 " />
-            <div className="p-2">
+            <div className="hidden sm:flex flex-wrap justify-left gap-1">
+                {technologies?.map((tech, index) => (
+                    <Tag key={index} text={tech} className=""/>
+                ))}
+            </div>
+            <div className="p-2 ">
                 <p className="text-left text-gray-800 font-semibold mb-0 p-0">{title}</p>
                 <p className="text-left text-gray-600 text-xs pb-4">{description}</p>
             </div>
-            <div className="flex pl-2 pb-4">
+            <div className="flex pl-2 pb-4 sm:hidden">
                 <Button label="View Project" onClick={onClick} />
+            </div>
+             <div className="sm:flex gap-1 pb-2 hidden">
+                {links?.github && (
+                    <Button 
+                        label="Github" 
+                        size="small" 
+                        className="my-2"
+                        onClick={() => window.open(links.github, '_blank')}
+                    />
+                )}
+                {links?.website && (
+                    <Button 
+                        label="Website" 
+                        size="small" 
+                        className="my-2"
+                        onClick={() => window.open(links.website, '_blank')}
+                    />
+                )}
+                {links?.youtube && (
+                    <Button 
+                        label="YouTube" 
+                        size="small" 
+                        className="my-2"
+                        onClick={() => window.open(links.youtube, '_blank')}
+                    />
+                )}
             </div>
         </div>
     );
