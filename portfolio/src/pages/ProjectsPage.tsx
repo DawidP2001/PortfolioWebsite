@@ -73,7 +73,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject,
             <motion.div 
                 initial={{ opacity: 0, y: 80 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.7 }}
                 className="flex flex-row sm:flex-row gap-4 mx-4 mt-4 mb-4 items-center justify-center"
             >
                 <input
@@ -94,7 +94,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject,
             <motion.div 
                 initial={{ opacity: 0, y: 80 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.7 }}
                 className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-4 mb-10"
             >
                 <div>

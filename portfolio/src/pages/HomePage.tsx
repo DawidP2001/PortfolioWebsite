@@ -10,13 +10,13 @@ interface HomePageProps {
   setSelectedProject: (project: string) => void;
 }
 
-const HomePage: React.FC<HomePageProps> = ({className, setSelectedPage, setSelectedProject}) => {
+const HomePage: React.FC<HomePageProps> = ({className, setSelectedProject}) => {
     return (
         <div className={"home-page min-h-screen text-white " + className}>
             <HeroSection />
             <AboutmeSection />
             <SkillsSection />
-            <ProjectsSection setSelectedProject={setSelectedProject} setSelectedPage={setSelectedPage}/>
+            <ProjectsSection setSelectedProject={setSelectedProject}/>
             <ContactSection />
         </div>
     );

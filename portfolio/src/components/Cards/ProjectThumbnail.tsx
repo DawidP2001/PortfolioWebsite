@@ -9,7 +9,7 @@ interface ProjectThumbnailProps {
 
 const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ title, tags, className, imgSrc, onclick, underDevelopment }) => {
     return (
-        <div className={`mb-4 shadow-lg rounded-xs cursor-pointer border-l-2 bg-white border-red-400 `+ className} onClick={() => { if (onclick) onclick(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+        <div className={`mb-4 shadow-lg rounded-xs cursor-pointer border-l-2 bg-white border-red-400 hover:scale-105 active:scale-95 touch-manipulation transition-all duration-200 `+ className} onClick={(e) => { if (onclick) onclick(); window.scrollTo({ top: 0, behavior: 'smooth' }); e.currentTarget.blur(); }}>
             <div className="relative">
                 <img src={imgSrc} alt={title} className="w-full object-cover mb-1 " />
                 {underDevelopment &&

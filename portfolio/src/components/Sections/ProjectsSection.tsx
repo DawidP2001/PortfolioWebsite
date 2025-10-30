@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import ProjectCard from "../Cards/ProjectCard";
 import SectionTitle from "../SectionTitle";
 
 interface ProjectsSectionProps {
     className?: string;
     setSelectedProject: (project: string) => void;
-    setSelectedPage: (page: string) => void;
 }
 
-const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelectedProject, setSelectedPage}) => {
+const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelectedProject}) => {
+    const navigate = useNavigate();
     return (
         <section 
             className={"projects-section min-h-screen mb-10 " + className}
@@ -16,7 +17,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
             <motion.div
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.7 }}
               viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
             >
             <SectionTitle title="Projects" className=""/>
@@ -27,32 +28,32 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
                     title="Knitting Page"
                     description="This is a description of Project One."
                     className=""
-                    onClick={() => { setSelectedProject("Knitting Page"); setSelectedPage("projects"); }}
+                    onClick={() => { setSelectedProject("Knitting Page"); navigate("/projects"); }}
                 />
                 <ProjectCard
                     imgSrc="/ProjectImages/RedditSentiment.png"
                     title="Reddit Setntiment Analysis"
                     description="This is a description of Project One."
                     className=""
-                    onClick={() => { setSelectedProject("Reddit Sentiment Analysis"); setSelectedPage("projects"); }}
+                    onClick={() => { setSelectedProject("Reddit Sentiment Analysis"); navigate("/projects"); }}
                 />
                 <ProjectCard
                     imgSrc="/ProjectImages/AssemblyGame.png"
                     title="Assembly Space Shooter"
                     description="This is a description of Project One."
                     className=""
-                    onClick={() => { setSelectedProject("Assembly Space Shooter"); setSelectedPage("projects"); }}
+                    onClick={() => { setSelectedProject("Assembly Space Shooter"); navigate("/projects"); }}
                 />
                 <ProjectCard
                     imgSrc="/ProjectImages/MLPortfolio.png"
                     title="Machine Learning Portfolio"
                     description="This is a description of Project One."
                     className=""
-                    onClick={() => { setSelectedProject("Machine Learning Portfolio"); setSelectedPage("projects"); }}
+                    onClick={() => { setSelectedProject("Machine Learning Portfolio"); navigate("/projects"); }}
                 />
             </div>
             <div className="flex items-center justify-center space-x-2 cursor-pointer hover:underline">
-                <button onClick={() => {setSelectedPage("projects")}} className="text-red-600 font-medium" style={{}} >
+                <button onClick={() => { navigate("/projects"); }} className="text-red-600 font-medium" style={{}} >
                     View All Projects
                     <img
                         src="/Icons/arrow.png"

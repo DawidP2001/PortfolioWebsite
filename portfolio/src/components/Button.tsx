@@ -22,10 +22,13 @@ const Button: React.FC<ButtonProps> = ({ label, onClick, className = "", style, 
     return (
         <button
             className={
-                `text-white bg-[var(--primary-colour)] rounded-lg cursor-pointer hover:opacity-80 hover:scale-110 transition-transform duration-200 ${sizeClasses} ${className}`
+                `text-white bg-[var(--primary-colour)] rounded-lg cursor-pointer hover:opacity-80 hover:scale-110 active:scale-95 active:opacity-90 touch-manipulation transition-all duration-200 ${sizeClasses} ${className}`
             }
             style={style}
-            onClick={onClick}
+            onClick={(e) => {
+                onClick();
+                e.currentTarget.blur();
+            }}
         >
             {label}
         </button>

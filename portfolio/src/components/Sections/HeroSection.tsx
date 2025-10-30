@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({className}) => {
           <motion.div
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.7 }}
           >
           <h1 className="z-10 font-extrabold text-5xl">
           Hi, I'm Dawid Pionk

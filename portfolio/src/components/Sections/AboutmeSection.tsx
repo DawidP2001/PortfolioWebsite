@@ -11,7 +11,7 @@ const AboutmeSection: React.FC<AboutmeSectionProps> = ({className}) => {
             <motion.div
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.7 }}
               viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
             >
               <SectionTitle title="About Me" className=""/>
