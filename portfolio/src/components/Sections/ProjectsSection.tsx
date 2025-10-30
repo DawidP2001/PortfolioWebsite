@@ -12,13 +12,14 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
     const navigate = useNavigate();
     return (
         <section 
-            className={"projects-section min-h-screen mb-10 " + className}
+            className={"projects-section min-h-screen mb-10 flex justify-center " + className}
         >
             <motion.div
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
+                className="max-w-[400px]"
             >
             <SectionTitle title="Projects" className=""/>
             <h2 className="text-black mb-2 mx-2">Here are some of the projects I've worked on:</h2>

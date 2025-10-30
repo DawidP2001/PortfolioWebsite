@@ -19,7 +19,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject,
         window.scrollTo({ top: 0 });
     }, []);
     return (
-        <div className={"mt-10 project-page min-h-screen bg-[var(--dominant-colour)] " + className}>
+        <div className={"mt-10 project-page min-h-screen bg-[var(--dominant-colour)]" + className}>
             <SectionTitle title="Projects" className=""/>
             {selectedProjectData &&
             <motion.div

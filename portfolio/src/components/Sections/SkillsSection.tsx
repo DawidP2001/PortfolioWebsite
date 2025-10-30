@@ -8,13 +8,14 @@ interface ContactSectionProps {
 const ContactSection: React.FC<ContactSectionProps> = ({className}) => {
     return (
         <section 
-            className={"contact-section pb-20 " + className}
+            className={"contact-section pb-20 flex justify-center " + className}
         >
             <motion.div
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
+                className="max-w-[400px]"
             >
             <SectionTitle title="Skills" className=""/>
             <div className="grid grid-cols-6 mx-2 gap-2">
