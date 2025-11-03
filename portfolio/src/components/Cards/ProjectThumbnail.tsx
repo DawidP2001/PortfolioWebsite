@@ -1,3 +1,7 @@
+/**
+ * ProjectThumbnail.tsx
+ * Thumbnail component to display individual project previews. These are used in the projects page.
+ */
 interface ProjectThumbnailProps {
     title?: string;
     tags?: string;

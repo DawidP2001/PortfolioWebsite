@@ -1,3 +1,7 @@
+/**
+ * ProjectCard.tsx
+ * Card component to display individual project details. These are used in the projects section of the home page.
+ */
 import Button from "../Button";
 import Tag from "../Tag";
 
