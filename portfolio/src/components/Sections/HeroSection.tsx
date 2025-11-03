@@ -21,8 +21,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({className}) => {
             transition={{ duration: 0.7 }}
             className="sm:flex items-center justify-center space-x-10 mx-4"
           >
-            <div>
-              <h1 className="z-10 font-extrabold text-5xl">
+            <div className="m-0">
+              <h1 className="z-10 font-extrabold text-4xl sm:text-5xl mx-auto text-center text-white">
                 Hi, I'm Dawid Pionk
               </h1>
               <p className="z-10 text-white">Welcome to my portfolio website!</p>
