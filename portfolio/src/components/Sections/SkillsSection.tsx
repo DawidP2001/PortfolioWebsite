@@ -4,8 +4,9 @@ import SectionTitle from "../SectionTitle";
 
 interface ContactSectionProps {
     className?: string;
+    titleSize?: "normal" | "small";
 }
-const ContactSection: React.FC<ContactSectionProps> = ({className}) => {
+const ContactSection: React.FC<ContactSectionProps> = ({className, titleSize="normal"}) => {
     return (
         <section 
             className={"contact-section pb-20 flex justify-center " + className}
@@ -17,8 +18,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({className}) => {
                 viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
                 className="max-w-[400px]"
             >
-            <SectionTitle title="Skills" className=""/>
-            <div className="grid grid-cols-6 mx-2 gap-2">
+            {titleSize=="normal" ? <SectionTitle title="Skills"/> : <SectionTitle title="Skills" titleSize="small"/>}
+            <div className="grid grid-cols-6 mx-2 gap-2"> 
                 <IconCard imgSrc="/SkillIcons/atom.png" className="w-full h-full"/>
                 <IconCard imgSrc="/SkillIcons/ASM.png" className="w-full h-full" imgClassName="bg-gray-200 rounded-xl"/>
                 <IconCard imgSrc="/SkillIcons/AWS.png" className="w-full h-full" imgClassName="bg-gray-200 rounded-xl"/>
