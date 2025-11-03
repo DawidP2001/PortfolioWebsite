@@ -4,6 +4,7 @@ import HeroSection from "../components/Sections/HeroSection";
 import ProjectsSection from "../components/Sections/ProjectsSection";
 import SkillsSection from "../components/Sections/SkillsSection";
 import WorkSection from "../components/Sections/WorkSection";
+import SectionTitle from "../components/SectionTitle";
 
 interface HomePageProps {
   className?: string;
@@ -17,9 +18,15 @@ const HomePage: React.FC<HomePageProps> = ({className, setSelectedProject}) => {
             <HeroSection />
             <AboutmeSection />
             <SkillsSection className="sm:hidden"/>
-            <div className="grid grid-cols-2 sm:max-w-[1000px] mx-auto mb-20">
-            <WorkSection className="hidden sm:block " />
-            <SkillsSection />
+            <div className="grid grid-cols-2 sm:max-w-[1000px] mx-auto mb-20 ">
+            <div>
+                <SectionTitle title="Experience" className="hidden sm:block"/>
+            </div>
+            <div>
+                <SectionTitle title="Skills" className="hidden sm:block"/>
+            </div>
+            <WorkSection className="hidden sm:block " title={false}/>
+            <SkillsSection title={false} />
             </div>
             <ProjectsSection setSelectedProject={setSelectedProject}/>
             <ContactSection />

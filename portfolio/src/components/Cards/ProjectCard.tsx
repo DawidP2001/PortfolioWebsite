@@ -21,7 +21,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, className, imgSrc, onClick, technologies, links }) => {
     return (
-        <div className={`bg-white rounded shadow-lg border-l-4 border-[var(--primary-colour)] relative pb-10 sm:hover:shadow-xl transition-all duration-300 sm:hover:scale-105 transform `+ className} onClick={onClick}>
+        <div className={`bg-white rounded shadow-lg border-l-4 border-[var(--primary-colour)] relative pb-10 sm:hover:shadow-xl transition-all duration-300 sm:hover:scale-101 transform `+ className} onClick={onClick}>
             <img src={imgSrc} alt={title} className="w-full object-cover mb-1 sm:max-h-[200px]" />
             <div className="hidden sm:flex flex-wrap justify-left gap-1 ml-2 mt-2">
                 {technologies?.map((tech, index) => (
