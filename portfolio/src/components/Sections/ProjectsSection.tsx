@@ -29,7 +29,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
             <SectionTitle title="Projects" className="sm:mb-12"/>
             <h2 className="text-black mb-2 mx-2 sm:hidden">Here are some of the projects I've worked on:</h2>
             <div className="px-5 mb-5 sm:grid sm:grid-cols-3 sm:gap-4">
-                {allProjects.map((project, index) => {
+                {allProjects.map((project, ) => {
                     const isVisibleOnMobile = mobileProjectNames.includes(project.name);
                     return (
                         
