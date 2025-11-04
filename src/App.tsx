@@ -3,10 +3,8 @@
  * Main application component.
  * 
  * To Do:
- *  - Add hover effects on mobile
- *  2. Add an experience section
- *  3. Add more animations
- *  - Start on desktop
+ *  - Add an effect showing the section ur on
+ *  - Functionality on projects page filter and sort
  */
 import Navbar from './components/Navbar'
 import './App.css'
