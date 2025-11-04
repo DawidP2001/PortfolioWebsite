@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/PortfolioWebsite/', // Replace with your GitHub repo name
+  base: '/', // Replace with your GitHub repo name
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
