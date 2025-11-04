@@ -6,6 +6,7 @@
  *  - Add an effect showing the section ur on
  *  - Functionality on projects page filter and sort
  *  - Add functionality for hero page buttons
+ *  - Add animation for work and skill titles
  */
 import Navbar from './components/Navbar'
 import './App.css'
