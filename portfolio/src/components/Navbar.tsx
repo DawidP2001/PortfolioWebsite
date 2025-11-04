@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface NavbarProps {
   className?: string;
@@ -9,6 +9,19 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({className, sideMenuOpen, setSideMenuOpen}) => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(`/#${sectionId}`);
+    }
+  };
+
   return (
     <>
       {/* Mobile Navbar */}
@@ -36,11 +49,12 @@ const Navbar: React.FC<NavbarProps> = ({className, sideMenuOpen, setSideMenuOpen
       <nav className="hidden md:flex fixed top-4 left-1/2 transform -translate-x-1/2 backdrop-blur-md rounded-2xl border border-gray-700 shadow-lg z-50 px-6 py-3" 
            style={{backgroundColor: "rgba(157, 186, 255, 0.5)"}}>
         <div className="flex space-x-8 items-center">
-          <a onClick={() => navigate("/")} className="text-white hover:text-gray-200 cursor-pointer transition-colors">Home</a>
-          <a onClick={() => navigate("/")} className="text-white hover:text-gray-200 cursor-pointer transition-colors">About</a>
-          <a onClick={() => navigate("/")} className="text-white hover:text-gray-200 cursor-pointer transition-colors">Skills</a>
-          <a onClick={() => navigate("/projects")} className="text-white hover:text-gray-200 cursor-pointer transition-colors">Projects</a>
-          <a onClick={() => navigate("/")} className="text-white hover:text-gray-200 cursor-pointer transition-colors">Contact</a>
+          <a onClick={() => scrollToSection('hero')} className="text-white hover:text-gray-200 cursor-pointer transition-colors">Home</a>
+          <a onClick={() => scrollToSection('about')} className="text-white hover:text-gray-200 cursor-pointer transition-colors">About</a>
+          <a onClick={() => scrollToSection('work')} className="text-white hover:text-gray-200 cursor-pointer transition-colors">Work</a>
+          <a onClick={() => scrollToSection('skills')} className="text-white hover:text-gray-200 cursor-pointer transition-colors">Skills</a>
+          <a onClick={() => scrollToSection("projects")} className="text-white hover:text-gray-200 cursor-pointer transition-colors">Projects</a>
+          <a onClick={() => scrollToSection('contact')} className="text-white hover:text-gray-200 cursor-pointer transition-colors">Contact</a>
         </div>
       </nav>
     </>

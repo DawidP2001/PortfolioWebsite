@@ -8,7 +8,7 @@ interface HeroSectionProps {
 }
 const HeroSection: React.FC<HeroSectionProps> = ({className}) => {
   return (
-      <section className={"hero-section min-h-screen flex flex-col items-center justify-center " + className}>
+      <section id="hero" className={"hero-section min-h-screen flex flex-col items-center justify-center " + className}>
           <div className="animation-wrapper">
             <div className="particle particle-1"></div>
             <div className="particle particle-2"></div>

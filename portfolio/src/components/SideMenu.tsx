@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface SideMenuProps {
   className?: string;
@@ -8,6 +8,19 @@ interface SideMenuProps {
 
 const SideMenu: React.FC<SideMenuProps> = ({className, setSideMenuOpen}) => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(`/#${sectionId}`);
+    }
+  };
+  
   return (
     <motion.div 
         initial={{ x: '-100%' }}
@@ -20,11 +33,12 @@ const SideMenu: React.FC<SideMenuProps> = ({className, setSideMenuOpen}) => {
     >
         <img src="/Icons/close.png" alt="Close Icon" className="w-8 h-8 z-10 absolute m-4 top-2 right-0"/>
         <div className="flex flex-col items-start space-y-10 mt-5 p-2">
-            <a className="text-3xl cursor-pointer" onClick={() => { navigate("/"); setSideMenuOpen(false); }}>Home</a>
-            <a className="text-3xl cursor-pointer" onClick={() => { navigate("/"); setSideMenuOpen(false); }}>About Me</a>
-            <a className="text-3xl cursor-pointer" onClick={() => { navigate("/"); setSideMenuOpen(false); }}>Skills</a>
+            <a className="text-3xl cursor-pointer" onClick={() => { scrollToSection("hero"); setSideMenuOpen(false); }}>Home</a>
+            <a className="text-3xl cursor-pointer" onClick={() => { scrollToSection("about"); setSideMenuOpen(false); }}>About Me</a>
+            <a className="text-3xl cursor-pointer" onClick={() => { scrollToSection("work"); setSideMenuOpen(false); }}>Work</a>
+            <a className="text-3xl cursor-pointer" onClick={() => { scrollToSection("skills"); setSideMenuOpen(false); }}>Skills</a>
             <a className="text-3xl cursor-pointer" onClick={() => { navigate("/projects"); setSideMenuOpen(false); }}>Projects</a>
-            <a className="text-3xl cursor-pointer" onClick={() => { navigate("/"); setSideMenuOpen(false); }}>Contact</a>
+            <a className="text-3xl cursor-pointer" onClick={() => { scrollToSection("contact"); setSideMenuOpen(false); }}>Contact</a>
         </div>
     </motion.div>
   );

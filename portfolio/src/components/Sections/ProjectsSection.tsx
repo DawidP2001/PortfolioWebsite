@@ -18,12 +18,13 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({className, setSelected
     return (
         <section 
             className={"projects-section min-h-screen mb-10 flex justify-center " + className}
+            id="projects"
         >
             <motion.div
               initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true, amount: 0.01 }}
                 className="max-w-[400px] sm:max-w-[1280px]"
             >
             <SectionTitle title="Projects" className="sm:mb-12"/>

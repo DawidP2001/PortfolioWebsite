@@ -17,6 +17,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({className, title=true}) 
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true, amount: 0.1 }} // 'once' means animate only the first time, 'amount' is how much should be visible
                 className="max-w-[400px]"
+
             >
             {title ? <SectionTitle title="Skills"/> : null}
             <div className="grid grid-cols-6 mx-2 gap-2"> 

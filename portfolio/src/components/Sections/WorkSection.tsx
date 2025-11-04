@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import AboutContainer from "../AboutContainer";
 import SectionTitle from "../SectionTitle";
 
-interface WorkSkillSectionProps {
+interface WorkSectionProps {
     className?: string;
     title?: boolean
 }
 
-const WorkSkillSection: React.FC<WorkSkillSectionProps> = ({ className, title=true }) => {
+const WorkSection: React.FC<WorkSectionProps> = ({ className, title=true }) => {
     return (
         <motion.div 
             initial={{ opacity: 0, y: 80 }}
@@ -32,4 +32,4 @@ const WorkSkillSection: React.FC<WorkSkillSectionProps> = ({ className, title=tr
         </motion.div>
     );
 };
-export default WorkSkillSection;
+export default WorkSection;
