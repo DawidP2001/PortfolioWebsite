@@ -5,6 +5,7 @@
  * To Do:
  *  - Add an effect showing the section ur on
  *  - Functionality on projects page filter and sort
+ *  - Add functionality for hero page buttons
  */
 import Navbar from './components/Navbar'
 import './App.css'
