@@ -8,14 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/', // Replace with your GitHub repo name
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
-  },
+  base: '/',
 })
