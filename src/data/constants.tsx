@@ -7,7 +7,7 @@ export const allProjects = [
    {
     id: 1,
     name: "Knitting Page",
-    description: "A beautifully crafted website showcasing handmade knitting and crocheting projects. Features an elegant, responsive design that adapts seamlessly to mobile and desktop devices. Built with modern web technologies and designed in Figma for optimal user experience and visual appeal.",
+    description: "A website showcasing handmade knitting and crocheting projects. Features an elegant, responsive design that adapts seamlessly to mobile and desktop devices. Built with modern web technologies and designed in Figma for optimal user experience and visual appeal.",
     technologies: ["React", "TypeScript", "CSS", "HTML", "Javascript", "Talwind", "Figma"],
     links: {
       website: "https://caillougarage.ie/",
@@ -61,7 +61,7 @@ export const allProjects = [
   {
     id: 6,
     name: "Reddit Sentiment Analyser",
-    description: "Award-winning full-stack web application that analyzes and visualizes sentiment trends in Reddit posts. Shortlisted for the prestigious Sun Life final year projects award. Features a reactive JavaScript frontend with Bootstrap styling and a Flask backend serving real-time sentiment analysis. Utilizes Reddit API with PRAW for data extraction and combines NLTK, VADER, TensorFlow, and Hugging Face transformers for comprehensive sentiment analysis.",
+    description: "Full-stack web application that analyzes and visualizes sentiment trends in Reddit posts. Shortlisted for the Sun Life final year projects award. Features a reactive JavaScript frontend with Bootstrap styling and a Flask backend serving real-time sentiment analysis. Utilizes Reddit API with PRAW for data extraction and combines NLTK, VADER, TensorFlow, and Hugging Face transformers for comprehensive sentiment analysis.",
     technologies: ["Flask", "Vader", "Python", "TensorFlow", "JavaScript", "Bootstrap", "HTML", "CSS"],
     links: {
       github: "https://github.com/DawidP2001/Reddit-Sentiment-Analyser",
@@ -73,7 +73,7 @@ export const allProjects = [
   {
     id: 7,
     name: "Flappy dog",
-    description: "A charming C++ recreation of the classic Flappy Bird game featuring an adorable dachshund as the protagonist. Features hand-drawn animations created in Krita, complete scoring system, and physics-based gameplay. Currently expanding with a customizable skin system for enhanced player personalization.",
+    description: "A charming C++ recreation of the classic Flappy Bird game featuring a dachshund as the protagonist. Features hand-drawn animations created in Krita, complete scoring system, and physics-based gameplay. Currently expanding with a customizable skin system for enhanced player personalization.",
     technologies: ["C++", "SFML", "Krita"],
     links: {
       github: "https://github.com/DawidP2001/Floppy-Bird"
@@ -84,10 +84,10 @@ export const allProjects = [
     id: 8,
     name: "Portfolio Website",
     description: "A modern, fully responsive portfolio website showcasing my projects and technical skills. Built with React and TypeScript for robust development, featuring smooth animations with Framer Motion and elegant styling with Tailwind CSS. Optimized for seamless viewing across all devices and screen sizes.",
-    technologies: ["React", "TypeScript", "CSS", "Tailwind", "HTML", "Javascript"],
+    technologies: ["React", "TypeScript", "CSS", "Tailwind", "HTML", "Javascript", "SCSS"],
     links: {
       github: "https://github.com/DawidP2001/PortfolioWebsite"
     },
-    imgSrc: "/ProjectImages/RedditSentiment.png",
+    imgSrc: "/ProjectImages/PortfolioPage.png",
   }
 ];

@@ -12,7 +12,7 @@ const WorkSection: React.FC<WorkSectionProps> = ({ className, title=true }) => {
         <motion.div 
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true, amount: 0.1 }}
             className={"work-section mx-auto " + className}
         >

@@ -125,8 +125,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject,
                     onclick={() => setSelectedProject("Reddit Sentiment Analyser")}
                 />
                 <ProjectThumbnail
-                    underDevelopment
-                    imgSrc="/ProjectImages/RedditSentiment.png"
+                    imgSrc="/ProjectImages/PortfolioPage.png"
                     title="Portfolio Website"
                     className=""
                     onclick={() => setSelectedProject("Portfolio Website")}

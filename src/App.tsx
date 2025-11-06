@@ -3,8 +3,7 @@
  * Main application component.
  * 
  * To Do:
- *  - Add an effect showing the section ur on the navbar
- *  - Change descriptions
+ *  - Nothing right now
  */
 import Navbar from './components/Navbar'
 import './App.css'
