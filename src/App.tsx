@@ -3,7 +3,7 @@
  * Main application component.
  * 
  * To Do:
- *  - Nothing right now
+ *  - Fix footer overflow on larger screens
  */
 import Navbar from './components/Navbar'
 import './App.css'
