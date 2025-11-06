@@ -7,6 +7,18 @@ interface HeroSectionProps {
   className?: string;
 }
 const HeroSection: React.FC<HeroSectionProps> = ({className}) => {
+    const onDownloadCV = () => {
+      const link = document.createElement('a');
+      link.href = '/cv.pdf';
+      link.download = 'Dawid_Pionk_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    };
+    const scrollToSection = (id: string) => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
   return (
       <section id="hero" className={"hero-section min-h-screen flex flex-col items-center justify-center " + className}>
           <div className="animation-wrapper">
@@ -27,14 +39,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({className}) => {
               </h1>
               <p className="z-10 text-white">Welcome to my portfolio website!</p>
               <div className="hidden sm:flex flex-row items-center justify-center mt-6 z-10 space-x-4 mx-2">
-                <Button label="Download Resume" onClick={() => {}} className="z-10"/>
-                <Button label="Contact Me" onClick={() => {}} className="z-10"/>
+                <Button label="Download Resume" onClick={onDownloadCV} className="z-10"/>
+              <Button label="Contact Me" onClick={() => scrollToSection('contact')} className="z-10"/>
               </div>
             </div>
             <img src="/hero.svg" alt="Hero Image" className="w-64 h-64 sm:w-100 sm:h-100 mt-4 mx-auto z-10"/>
             <div className="sm:hidden flex flex-row items-center justify-center mt-6 z-10 space-x-4 mx-2">
-              <Button label="Download Resume" onClick={() => {}} className="z-10"/>
-              <Button label="Contact Me" onClick={() => {}} className="z-10"/>
+              <Button label="Download Resume" onClick={onDownloadCV} className="z-10"/>
+              <Button label="Contact Me" onClick={() => scrollToSection('contact')} className="z-10"/>
             </div>
           </motion.div>
       </section>

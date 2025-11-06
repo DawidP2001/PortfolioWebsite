@@ -74,27 +74,6 @@ const ProjectPage: React.FC<ProjectPageProps> = ({className, setSelectedProject,
                 initial={{ opacity: 0, y: 80 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="flex flex-row sm:flex-row gap-4 mx-4 mt-4 mb-4 items-center justify-center"
-            >
-                <input
-                    type="text"
-                    placeholder="Search projects..."
-                    className="px-2 py-2 rounded-lg text-gray-500 bg-white h-10 w-3/4 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                />
-                <select
-                    className="text-xs py-3 rounded-lg text-gray-500 bg-white h-10 h-full focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    defaultValue="default"
-                >
-                    <option value="default" disabled>Sort by</option>
-                    <option value="name">Name</option>
-                    <option value="date">Date</option>
-                    <option value="tech">Technology</option>
-                </select>
-            </motion.div>
-            <motion.div 
-                initial={{ opacity: 0, y: 80 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
                 className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 px-4 mb-10"
             >
                 <div>

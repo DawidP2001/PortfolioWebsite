@@ -7,6 +7,7 @@ import ProjectsSection from "../components/Sections/ProjectsSection";
 import SkillsSection from "../components/Sections/SkillsSection";
 import WorkSection from "../components/Sections/WorkSection";
 import SectionTitle from "../components/SectionTitle";
+import { motion } from "framer-motion";
 
 interface HomePageProps {
   className?: string;
@@ -37,11 +38,27 @@ const HomePage: React.FC<HomePageProps> = ({className, setSelectedProject}) => {
                 <WorkSection className="sm:hidden p-1 mb-20" />
                 <div className="hidden sm:grid grid-cols-2 sm:max-w-[1000px] mx-auto mb-20">
                     <div>
-                        <SectionTitle title="Experience" className=""/>
+                        <motion.div
+                            initial={{ opacity: 0, y: 80 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: true, amount: 0.1 }}
+                            className=""
+                        >
+                            <SectionTitle title="Experience" className=""/>
+                        </motion.div>
                         <WorkSection className="" title={false}/>
                     </div>
                     <div>
-                        <SectionTitle title="Skills" className=""/>
+                        <motion.div
+                            initial={{ opacity: 0, y: 80 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: true, amount: 0.1 }}
+                            className=""
+                        >
+                            <SectionTitle title="Skills" className=""/>
+                        </motion.div>
                         <SkillsSection title={false} className="pt-8"/>
                     </div>
                 </div>
